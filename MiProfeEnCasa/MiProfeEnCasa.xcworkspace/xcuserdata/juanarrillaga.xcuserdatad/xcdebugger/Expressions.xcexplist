@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in RequestListViewController.getRequestList():RequestListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.requestList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RequestDetailViewController.doneButtonTapped():RequestDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.hourPicker.selectedRow(inComponent: 0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "RequestListViewController.setupMenu():RequestListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.revealViewController()">
+            </PersistentString>
+            <PersistentString
+               value = "btnMenu">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RequestListViewController.tableView(_:cellForRowAt:):RequestListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.requestList?.result?[indexPath.row].ClSMId">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "self.requestList?.result?[indexPath.row].SAfechaInicio">
+            </PersistentString>
+            <PersistentString
+               value = "date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RequestDetailViewController.setAmountOfHours():RequestDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ApiManager.sharedInstance.queryParameters">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RequestDetailViewController.setStartingClassTime(dateAndHour:):RequestDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ApiManager.sharedInstance.queryParameters">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in LoginViewController.btnContinueTap(_:):LoginViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ScheduleTableViewCell.sortAvailableTimesPerDay():ScheduleTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "request?.horarios">
+            </PersistentString>
+            <PersistentString
+               value = "request">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RequestDetailViewController.calculateHoursInterval():RequestDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.hoursOfClases">
+            </PersistentString>
+            <PersistentString
+               value = "startTime">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ApiManager.post&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RequestDetailViewController.pickerView(_:titleForRow:forComponent:):RequestDetailViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ApiManager.post&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.queryParameters.addingPercentEncoding( withAllowedCharacters: .urlUserAllowed)">
+            </PersistentString>
+            <PersistentString
+               value = "self.queryParameters.addingPercentEncoding( withAllowedCharacters: .urlUserAllowed)!">
+            </PersistentString>
+            <PersistentString
+               value = "self.queryParameters">
+            </PersistentString>
+            <PersistentString
+               value = "self.queryParameters.addingPercentEncoding( withAllowedCharacters: .urlFragmentAllowed)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RequestDetailViewController.tableView(_:cellForRowAt:):RequestDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.request">
+            </PersistentString>
+            <PersistentString
+               value = "self.request?.estadoSolicitudMaestroId">
+            </PersistentString>
+            <PersistentString
+               value = "self.request?.UdireccionCalle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Helpers.validateMinimunTimeRequest(selectedHour:selectedMinutes:):Helpers.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedHour == 1 &amp;&amp; selectedMinutes == 1">
+            </PersistentString>
+            <PersistentString
+               value = "selectedHour == 0">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Helpers.getLoggedUser():Helpers.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "loggedUser.tipoUsuarioId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #2 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProfileViewController.viewDidLoad():ProfileViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.user?.result?.celular">
+            </PersistentString>
+            <PersistentString
+               value = "txtEmail.text">
+            </PersistentString>
+            <PersistentString
+               value = "self.user.nombre">
+            </PersistentString>
+            <PersistentString
+               value = "self.user?.result?.email">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProfileViewController.btnOkTap(_:):ProfileViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "theJSONText">
+            </PersistentString>
+            <PersistentString
+               value = "ApiManager.sharedInstance.queryParameters">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RequestDetailViewController.calculateHoursInterval(rowIndex:):RequestDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.request?.horarios![rowIndex].horarioComienzo">
+            </PersistentString>
+            <PersistentString
+               value = "self.request?.horarios!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Mapper.map(JSON:):Mapper.swift">
+      </ContextState>
+      <ContextState
+         contextName = "static Helpers.saveUserInDevice(user:):Helpers.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
