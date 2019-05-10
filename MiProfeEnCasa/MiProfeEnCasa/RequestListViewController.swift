@@ -13,6 +13,8 @@ class RequestListViewController: UIViewController, SWRevealViewControllerDelegat
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnMenu: UIBarButtonItem!
+    fileprivate var heightDictionary: [Int : CGFloat] = [:]
+
     var requestList: RequestListModel?
     
     override func viewDidLoad() {
@@ -24,8 +26,11 @@ class RequestListViewController: UIViewController, SWRevealViewControllerDelegat
         self.tableView.dataSource = self
         self.navigationItem.hidesBackButton = true
         self.title = "Solicitudes"
-        
+
+        NotificationCenter.default.addObserver(self, selector: #selector(self.deviceTokenAssociation), name: Notification.Name("FCMToken"), object: nil)
+    
         self.setupMenu()
+        self.deviceTokenAssociation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +82,30 @@ class RequestListViewController: UIViewController, SWRevealViewControllerDelegat
             {}
         }
     }
+    
+    @objc func deviceTokenAssociation()
+    {
+        if let token = Helpers.tokenIdForPushNofifications
+        {
+            ApiManager.sharedInstance.queryParameters = "usuarioId=" + String(Helpers.getLoggedUser()._id ?? 0) + "&token=" + Helpers.getStringParameter(parameter: token)
+            ApiManager.sharedInstance.execute(type: DeviceTokenAssociationModel.self, operation: "post") { (response:AnyObject?) in
+                if((response) != nil)
+                {
+                    if response is NSError
+                    {}
+                    else if response is DeviceTokenAssociationModel {
+                        if((response as! DeviceTokenAssociationModel).code == 1)
+                        {}
+                        else
+                        {
+                        }
+                    }
+                }
+                else
+                {}
+            }
+        }
+    }
 }
 
 extension RequestListViewController : UITableViewDelegate, UITableViewDataSource
@@ -122,5 +151,14 @@ extension RequestListViewController : UITableViewDelegate, UITableViewDataSource
         let  requestDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "RequestDetailViewController") as! RequestDetailViewController
         requestDetailViewController.request = self.requestList?.result![indexPath.row]
         self.navigationController?.pushViewController(requestDetailViewController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        heightDictionary[indexPath.row] = cell.frame.size.height
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = heightDictionary[indexPath.row]
+        return height ?? UITableView.automaticDimension
     }
 }

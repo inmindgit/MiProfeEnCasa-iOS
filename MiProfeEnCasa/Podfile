@@ -9,9 +9,11 @@ target 'MiProfeEnCasa' do
   pod 'AlamofireImage' 
   pod 'OAuthSwift'
   pod 'SwiftyJSON'
-  pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'SVProgressHUD'
   pod 'SWRevealViewController'
   pod 'GBFloatingTextField'
   pod 'Segmentio', '~> 3.3'
-  pod "PickerButton"
+  pod "TPKeyboardAvoidingSwift"
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 end

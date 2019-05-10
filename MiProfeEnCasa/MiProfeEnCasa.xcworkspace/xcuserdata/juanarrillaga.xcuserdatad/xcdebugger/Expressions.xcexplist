@@ -11,15 +11,15 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
+      </ContextState>
+      <ContextState
          contextName = "RequestDetailViewController.doneButtonTapped():RequestDetailViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.hourPicker.selectedRow(inComponent: 0)">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
       </ContextState>
       <ContextState
          contextName = "RequestListViewController.setupMenu():RequestListViewController.swift">
@@ -39,10 +39,10 @@
                value = "self.requestList?.result?[indexPath.row].ClSMId">
             </PersistentString>
             <PersistentString
-               value = "indexPath.row">
+               value = "self.requestList?.result?[indexPath.row].SAfechaInicio">
             </PersistentString>
             <PersistentString
-               value = "self.requestList?.result?[indexPath.row].SAfechaInicio">
+               value = "indexPath.row">
             </PersistentString>
             <PersistentString
                value = "date">
@@ -80,14 +80,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #2 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "response.result.value">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "RequestDetailViewController.calculateHoursInterval():RequestDetailViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -95,6 +87,14 @@
             </PersistentString>
             <PersistentString
                value = "startTime">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -137,6 +137,17 @@
             </PersistentString>
             <PersistentString
                value = "self.request?.UdireccionCalle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RequestListViewController.deviceTokenAssociation():RequestListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Helpers.tokenIdForPushNofifications">
+            </PersistentString>
+            <PersistentString
+               value = "ApiManager.sharedInstance.queryParameters">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

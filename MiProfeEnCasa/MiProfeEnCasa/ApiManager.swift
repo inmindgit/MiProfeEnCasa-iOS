@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 import AlamofireObjectMapper
+import SVProgressHUD
 
 class ApiManager
 {
@@ -27,7 +28,8 @@ class ApiManager
     let countRetry:Int = 2
     var albumId = ""
     var castingId = ""
-    
+    var showHud: Bool = true
+   
     class var sharedInstance:ApiManager {
         struct Singleton {
             static let instance = ApiManager()
@@ -40,19 +42,24 @@ class ApiManager
         var headers = [String:String]()
         headers = ["Content-Type":"application/x-www-form-urlencoded","AuthToken":"ApxnHCG/NmmqRN9NA+IHOKtsPj6I/UJlfw64mbW3nPjQ"]
         
-       // SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.gradient)
-       // SVProgressHUD.show()
+     
+        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.light)
+        SVProgressHUD.setBackgroundColor(UIColor.clear)
+        SVProgressHUD.setForegroundColor(UIColor(red: 255/255.0, green: 136.0/255.0, blue: 0/255.0, alpha: 1))
+        SVProgressHUD.show()
+        
+        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         self.executeHttpFunction(type: type, headers: headers, operation: operation, onCompletion: { (response:AnyObject?) in
             if(response != nil)
             {
-               // SVProgressHUD.dismiss()
+                SVProgressHUD.dismiss()
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 onCompletion(response)
             }
             else
             {
-               // SVProgressHUD.dismiss(
+                SVProgressHUD.dismiss()
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 onCompletion(response as! NSError?)
             }

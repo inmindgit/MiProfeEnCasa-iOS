@@ -8,7 +8,6 @@
 
 import UIKit
 import Segmentio
-import PickerButton
 
 private struct Days
 {

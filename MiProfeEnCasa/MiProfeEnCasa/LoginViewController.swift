@@ -18,24 +18,29 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isHidden = false
-    }
-    
+        
     @IBAction func btnContinueTap(_ sender: Any) {
-        if(txtUserName.text == "" || txtPassword.text == "")
+        var errorMessage = ""
+        
+        if(txtUserName.text == "" || !(Helpers.isValidEmail(testStr: txtUserName.text!)))
         {
-            let alert = UIAlertController(title: "Mi Profe en Casa", message:"Las credenciales son incorrectas, por favor verifica", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            txtUserName.becomeFirstResponder()
+            errorMessage = "Por favor ingrese un E-Mail"
+        }
+        else if(txtPassword.text == "")
+        {
+            txtPassword.becomeFirstResponder()
+            errorMessage = "Por favor ingrese una Contraseña"
         }
         else
         {
-         
             ApiManager.sharedInstance.queryParameters = "email=" + Helpers.getStringParameter(parameter: txtUserName!.text!) + "&password=" + Helpers.getStringParameter(parameter: txtPassword!.text!) + "&tipoLogin=4"
             ApiManager.sharedInstance.execute(type: LoginModel.self, operation: "post") { (response:AnyObject?) in
                 if((response) != nil)
@@ -56,7 +61,7 @@ class LoginViewController: UIViewController {
                         }
                         else
                         {
-                            let alert = UIAlertController(title: "Mi Profe en Casa", message:"Las credenciales son incorrectas, por favor verifica", preferredStyle: .alert)
+                            let alert = UIAlertController(title: "Mi Profe en Casa", message:"Login Incorrecto, por favor revise los datos ingresados.", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
                             self.present(alert, animated: true)
                         }
@@ -65,6 +70,13 @@ class LoginViewController: UIViewController {
                 else
                 {}
             }
+        }
+        
+        if(errorMessage != "")
+        {
+            let alert = UIAlertController(title: "Mi Profe en Casa", message:errorMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            self.present(alert, animated: true)
         }
     }
     

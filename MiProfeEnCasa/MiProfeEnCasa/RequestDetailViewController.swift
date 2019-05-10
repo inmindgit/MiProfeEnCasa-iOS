@@ -26,9 +26,11 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
         super.viewDidLoad()
 
         self.title = "Detalle de solicitud"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         self.setupHourPicker()
         self.setupTableView()
         self.setupHeaderImageView()
+        
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -196,7 +198,18 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
     
     func loadTimeOrAddReport() {
         self.isClassHourPickerSelection = false
-        self.txtPickerDispaly.becomeFirstResponder()
+        if((self.request?.estadoSolicitudMaestroId)! == Constants.RequestStatus.kRequestEnded)
+        {
+            let  reportViewController = self.storyboard?.instantiateViewController(withIdentifier: "ReportViewController") as! ReportViewController
+            reportViewController.classsId = String(request?.claseId ?? 0)
+            reportViewController.courseId = String(request?.cursoAsociadoId ?? 0)
+            reportViewController.studentId = String(request?.solicitudAlumnoId ?? 0)
+            self.navigationController?.pushViewController(reportViewController, animated: true)
+        }
+        else
+        {
+            self.txtPickerDispaly.becomeFirstResponder()
+        }
     }
     
     func selectClassHours(classesOfDay: [ScheduleModel], index: Int)

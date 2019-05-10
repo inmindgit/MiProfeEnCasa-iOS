@@ -582,7 +582,6 @@ class ProfileUpdateModel : NSObject, Mappable, Meta
 @objc(RequestAcceptModel)
 class RequestAcceptModel : NSObject, Mappable, Meta
 {
-    var result: UserModel?
     var code: Int?
     var error_message: String?
     
@@ -594,7 +593,6 @@ class RequestAcceptModel : NSObject, Mappable, Meta
     }
     
     func mapping(map: Map) {
-        result <- map["result"]
         code <- map["code"]
         error_message <- map["error_message"]
     }
@@ -616,7 +614,71 @@ class RequestAcceptModel : NSObject, Mappable, Meta
 @objc(ClassSetHoursModel)
 class ClassSetHoursModel : NSObject, Mappable, Meta
 {
-    var result: UserModel?
+    var code: Int?
+    var error_message: String?
+    
+    override init() {}
+    
+    //Impl. of Mappable protocol
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        code <- map["code"]
+        error_message <- map["error_message"]
+    }
+    
+    static func queryString() -> String {
+        return ""
+    }
+    
+    //Impl. of Meta protocol
+    static func url() -> String {
+        return "clase/asignar"
+    }
+    
+    static func expand() -> String{
+        return ""
+    }
+}
+
+@objc(ResetPasswordModel)
+class ResetPasswordModel : NSObject, Mappable, Meta
+{
+    var code: Int?
+    var error_message: String?
+    
+    override init() {}
+    
+    //Impl. of Mappable protocol
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        code <- map["code"]
+        error_message <- map["error_message"]
+    }
+    
+    static func queryString() -> String {
+        return ""
+    }
+    
+    //Impl. of Meta protocol
+    static func url() -> String {
+        return "usuario/restablecer"
+    }
+    
+    static func expand() -> String{
+        return ""
+    }
+}
+
+@objc(ResetPasswordModel)
+class ReportModel : NSObject, Mappable, Meta
+{
+    var result: ReportDetailsModel?
     var code: Int?
     var error_message: String?
     
@@ -639,7 +701,7 @@ class ClassSetHoursModel : NSObject, Mappable, Meta
     
     //Impl. of Meta protocol
     static func url() -> String {
-        return "clase/asignar"
+        return "informe/crear"
     }
     
     static func expand() -> String{
@@ -647,4 +709,93 @@ class ClassSetHoursModel : NSObject, Mappable, Meta
     }
 }
 
+@objc(ReportDetailsModel)
+class ReportDetailsModel : NSObject, Mappable, Meta
+{
+    var _id: Int?
+    var fecha: String?
+    var numeroClase: Int?
+    var claseId: Int?
+    var temasEjercicios: String?
+    var hizoDeberes: Int?
+    var aclaraciones: String?
+    var deberes: String?
+    var observaciones: String?
+    var aprobado: Int?
+    var CUnombre: String?
+    var UMnombre: String?
+    var UMapellido: String?
+    var UAnombre: String?
+    var UAapellido: String?
+
+    
+    override init() {}
+    
+    //Impl. of Mappable protocol
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        _id <- map["id"]
+        fecha <- map["fecha"]
+        claseId <- map["claseId"]
+        temasEjercicios <- map["temasEjercicios"]
+        hizoDeberes <- map["hizoDeberes"]
+        aclaraciones <- map["aclaraciones"]
+        deberes <- map["deberes"]
+        observaciones <- map["observaciones"]
+        aprobado <- map["aprobado"]
+        CUnombre <- map["CUnombre"]
+        UMnombre <- map["UMnombre"]
+        UMapellido <- map["UMapellido"]
+        UAnombre <- map["UAnombre"]
+        UAapellido <- map["UAapellido"]
+    }
+    
+    static func queryString() -> String {
+        return ""
+    }
+    
+    //Impl. of Meta protocol
+    static func url() -> String {
+        return "informe/crear"
+    }
+    
+    static func expand() -> String{
+        return ""
+    }
+}
+
+@objc(DeviceTokenAssociationModel)
+class DeviceTokenAssociationModel : NSObject, Mappable, Meta
+{
+    var code: Int?
+    var error_message: String?
+    
+    override init() {}
+    
+    //Impl. of Mappable protocol
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        code <- map["code"]
+        error_message <- map["error_message"]
+    }
+    
+    static func queryString() -> String {
+        return ""
+    }
+    
+    //Impl. of Meta protocol
+    static func url() -> String {
+        return "usuario/maestro/asociartoken"
+    }
+    
+    static func expand() -> String{
+        return ""
+    }
+}
 
