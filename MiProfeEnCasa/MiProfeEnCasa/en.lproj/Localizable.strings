@@ -1,0 +1,60 @@
+/* 
+  Localizable.strings
+  MiProfeEnCasa
+
+  Created by Juan Arrillaga on 5/13/19.
+  Copyright © 2019 Juan Arrillaga. All rights reserved.
+*/
+
+"NO_MAIL_ERROR" = "Por favor ingrese un E-Mail";
+"NO_PASSWORD_ERROR" = "Por favor ingrese una Contraseña";
+"LOGIN_ERROR" = "Login Incorrecto, por favor revise los datos ingresados.";
+"APP_NAME" = "Mi Profe en Casa";
+"ACCEPT" = "Aceptar";
+
+"START_CLASS" = "Incio propuesto: ";
+"CLASSES_PER_WEEK" = "Veces por semana: ";
+"TEST_DATE" = "Prueba: ";
+
+"RANGE_SELECTION_ERROR" = "Debe elegir una hora de comienzo dentro del rango elegido";
+"TIME_SELECTION_ERROR" = "Debe elegir una cantidad de tiempo superior o igual a 1:30 horas";
+"REQUESTS" = "Solicitudes";
+"PROFILE" = "Perfil";
+
+"RESET_PASSWORD" = "Restablecer contraseña";
+"REQUEST_SUCCESSFULLY" = "Solicitud procesada con éxito";
+
+"NO_MOBLE_ERROR" = "Por favor ingrese un Celular";
+
+"PROFILE_UNSUCCESSFULLY" = "El Perfil no ha sido actualizado, por favor verifique";
+"REQUESTS" = "Solicitudes";
+"REPORT" = "Informe";
+
+"REPORT_SUCCESSFULLY" = "Reporte enviado con éxito";
+"NO_CLASS_NUMBER" = "Debe ingresar un número de clase";
+"NO_EXERCICES" = "Debe ingresar los ejercicios realizados";
+"NO_OBSERVATIONS" = "Debe ingresar las observaciones";
+
+"REQUEST_DETAIL" = "Detalle de solicitud";
+
+"MOBILE" = "Celular";
+"E-MAIL" = "E-Mail";
+
+"ASSIGN" = "Asignar";
+"CANCEL" = "Cancelar";
+
+"LOAD_TIME" = "CARGAR HORAS";
+"LOAD_REPORT" = "INGRESAR INFORME";
+
+"PAYMENT_ACCEPTANCE" = "Pago pendiente de aceptación";
+"PAYMENT_ACCPETANCE_BY_STUDENT" = "Pendiente de aceptación del alumno";
+
+"MONDAY" = "L";
+"TUESDAY" = "M";
+"WEDNESDAY" = "M";
+"THURSDAY" = "J";
+"FRIDAY" = "V";
+"SATURDAY" = "S";
+"SUNDAY" = "D";
+
+"NO_TIME_AVAILABLE" = "No hay horarios para este dia";

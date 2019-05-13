@@ -25,7 +25,7 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Detalle de solicitud"
+        self.title = NSLocalizedString("REQUEST_DETAIL", comment: "")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         self.setupHourPicker()
         self.setupTableView()
@@ -63,9 +63,9 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
         self.hourPicker.dataSource = self
         self.hourPicker.delegate = self
         
-        let btnDone = UIBarButtonItem(title: "Asignar", style: .plain, target: self, action: #selector(self.doneButtonTapped))
+        let btnDone = UIBarButtonItem(title: NSLocalizedString("ASSIGN", comment: ""), style: .plain, target: self, action: #selector(self.doneButtonTapped))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(self.cancelButtonTapped))
+        let cancelButton = UIBarButtonItem(title: NSLocalizedString("CANCEL", comment: ""), style: .plain, target: self, action: #selector(self.cancelButtonTapped))
         
         let barAccessory = UIToolbar()
         barAccessory.barStyle = .default
@@ -101,8 +101,8 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
             }
             else
             {
-                let alert = UIAlertController(title: "Mi Profe en Casa", message:"Debe elegir una hora de comienzo dentro del rango elegido", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+                let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:NSLocalizedString("RANGE_SELECTION_ERROR", comment: ""), preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
         }
@@ -134,8 +134,8 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
                         }
                         else
                         {
-                            let alert = UIAlertController(title: "Mi Profe en Casa", message:(response as! ClassSetHoursModel).error_message, preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+                            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:(response as! ClassSetHoursModel).error_message, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
                             self.present(alert, animated: true)
                         }
                     }
@@ -144,10 +144,11 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
                 {}
             }
         }
+        
         else
         {
-            let alert = UIAlertController(title: "Mi Profe en Casa", message:"Debe elegir una cantidad de tiempo superior o igual a 1:30 horas", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:NSLocalizedString("TIME_SELECTION_ERROR", comment: ""), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
             self.present(alert, animated: true)
         }
       
@@ -180,8 +181,8 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
                         }
                         else
                         {
-                            let alert = UIAlertController(title: "Mi Profe en Casa", message:(response as! RequestAcceptModel).error_message, preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+                            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:(response as! RequestAcceptModel).error_message, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
                             self.present(alert, animated: true)
                         }
                     }
@@ -189,7 +190,6 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
             }
         }
     }
-    
     
     @objc func cancelButtonTapped()
     {
@@ -322,20 +322,5 @@ extension RequestDetailViewController : UIPickerViewDelegate, UIPickerViewDataSo
         {
             return self.pickerHours[component][row]
         }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if(self.isClassHourPickerSelection)
-        {
-            //var pickerHours = [["1","2","3","4","5","6","7","8","9","10"],["0", "30"]];
-           // var hoursOfClases: [String]?
-            
-        }
-        else
-        {
-           
-            //dateTextfield.text =   days + " " + month
-        }
-        
     }
 }

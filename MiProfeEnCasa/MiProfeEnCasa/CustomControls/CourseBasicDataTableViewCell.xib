@@ -19,11 +19,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="150.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Le-8s-Po4">
-                        <rect key="frame" x="10" y="10" width="30" height="30"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_graduation" translatesAutoresizingMaskIntoConstraints="NO" id="4Le-8s-Po4">
+                        <rect key="frame" x="10" y="10" width="25" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="5rM-WA-UEQ"/>
-                            <constraint firstAttribute="width" constant="30" id="dGH-It-cBM"/>
+                            <constraint firstAttribute="height" constant="25" id="5rM-WA-UEQ"/>
+                            <constraint firstAttribute="width" constant="25" id="dGH-It-cBM"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-D6-igS">
@@ -96,7 +96,7 @@
                     <constraint firstItem="Sxi-CE-LuI" firstAttribute="top" secondItem="Rh5-zQ-OO0" secondAttribute="bottom" constant="10" id="TNH-zm-XjB"/>
                     <constraint firstAttribute="trailing" secondItem="R6X-PP-DwS" secondAttribute="trailing" constant="10" id="UAG-wy-hxQ"/>
                     <constraint firstItem="R6X-PP-DwS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="aUs-fG-3zq"/>
-                    <constraint firstItem="vl2-D6-igS" firstAttribute="leading" secondItem="4Le-8s-Po4" secondAttribute="trailing" constant="10" id="bBG-gA-ql6"/>
+                    <constraint firstItem="vl2-D6-igS" firstAttribute="leading" secondItem="4Le-8s-Po4" secondAttribute="trailing" constant="15" id="bBG-gA-ql6"/>
                     <constraint firstItem="4Le-8s-Po4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="cCw-y2-ca6"/>
                     <constraint firstItem="T11-Kr-UNK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="cbc-NU-y9Y"/>
                     <constraint firstItem="Rh5-zQ-OO0" firstAttribute="top" secondItem="R6X-PP-DwS" secondAttribute="bottom" id="hnV-yh-BHn"/>
@@ -116,4 +116,7 @@
             <point key="canvasLocation" x="52.799999999999997" y="96.7016491754123"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ico_graduation" width="16" height="16"/>
+    </resources>
 </document>

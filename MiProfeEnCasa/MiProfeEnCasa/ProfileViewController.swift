@@ -22,10 +22,10 @@ class ProfileViewController: UIViewController, SWRevealViewControllerDelegate {
         
         self.setupMenu()
         self.user = Helpers.getLoggedUser()
-     
+   
         self.title = (self.user?.nombre)! + " " + (self.user?.apellido)!
-        txtMobilePhone.placeholder = "Celular"
-        txtEmail.placeholder = "E-mail"
+        txtMobilePhone.placeholder = NSLocalizedString("MOBILE", comment: "")
+        txtEmail.placeholder = NSLocalizedString("E-MAIL", comment: "") 
         txtMobilePhone.text = self.user?.celular
         txtEmail.text = self.user?.email
     }
@@ -59,12 +59,12 @@ class ProfileViewController: UIViewController, SWRevealViewControllerDelegate {
         if(txtMobilePhone.text == "")
         {
             txtMobilePhone.becomeFirstResponder()
-            errorMessage = "Por favor ingrese un Celular"
+            errorMessage = NSLocalizedString("NO_MOBLE_ERROR", comment: "")
         }
         else if(txtEmail.text == "" || !Helpers.isValidEmail(testStr: txtEmail.text!))
         {
             txtEmail.becomeFirstResponder()
-            errorMessage = "Por favor ingrese un E-Mail"
+            errorMessage = NSLocalizedString("NO_MAIL_ERROR", comment: "")
         }
         else
         {
@@ -110,8 +110,8 @@ class ProfileViewController: UIViewController, SWRevealViewControllerDelegate {
                             }
                             else
                             {
-                                let alert = UIAlertController(title: "Mi Profe en Casa", message:"El Perfil no ha sido actualizado, por favor verifique", preferredStyle: .alert)
-                                alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+                                let alert = UIAlertController(title:  NSLocalizedString("APP_NAME", comment: ""), message:NSLocalizedString("PROFILE_UNSUCCESSFULLY", comment: ""), preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title:  NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
                                 self.present(alert, animated: true)
                             }
                         }
@@ -124,8 +124,8 @@ class ProfileViewController: UIViewController, SWRevealViewControllerDelegate {
         
         if(errorMessage != "")
         {
-            let alert = UIAlertController(title: "Mi Profe en Casa", message:errorMessage, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:errorMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
             self.present(alert, animated: true)
         }
     }

@@ -14,8 +14,8 @@ class RecoverPasswordViewController: UIViewController {
     @IBOutlet weak var txtEmail: GBTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Restablecer contraseña"
-    }
+        self.title = NSLocalizedString("RESET_PASSWORD", comment: "")
+    }        
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -33,7 +33,7 @@ class RecoverPasswordViewController: UIViewController {
         if(txtEmail.text == "" || !(Helpers.isValidEmail(testStr: txtEmail.text!)))
         {
             txtEmail.becomeFirstResponder()
-            errorMessage = "Por favor ingrese un E-Mail"
+            errorMessage = NSLocalizedString("NO_MAIL_ERROR", comment: "")
         }
         else
         {
@@ -46,8 +46,8 @@ class RecoverPasswordViewController: UIViewController {
                     else if response is ResetPasswordModel {
                         if((response as! ResetPasswordModel).code == 1)
                         {
-                            let alert = UIAlertController(title: "Mi Profe en Casa", message:"Solicitud procesada con éxito", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+                            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: "") , message:NSLocalizedString("REQUEST_SUCCESSFULLY", comment: "") , preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
                             self.present(alert, animated: true)
                         
                             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -55,8 +55,8 @@ class RecoverPasswordViewController: UIViewController {
                         }
                         else
                         {
-                            let alert = UIAlertController(title: "Mi Profe en Casa", message:(response as! ResetPasswordModel).error_message, preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+                            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:(response as! ResetPasswordModel).error_message, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
                             self.present(alert, animated: true)
                         }
                     }
@@ -68,8 +68,8 @@ class RecoverPasswordViewController: UIViewController {
         
         if(errorMessage != "")
         {
-            let alert = UIAlertController(title: "Mi Profe en Casa", message:errorMessage, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:errorMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
             self.present(alert, animated: true)
         }
     }

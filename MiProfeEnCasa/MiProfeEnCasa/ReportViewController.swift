@@ -49,8 +49,8 @@ class ReportViewController: UIViewController {
                     else if response is ReportModel {
                         if((response as! ReportModel).code == 1)
                         {
-                            let alert = UIAlertController(title: "Mi Profe en Casa", message:"Reporte enviado con éxito", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+                            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message: NSLocalizedString("REPORT_SUCCESSFULLY", comment: ""), preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
                             self.present(alert, animated: true)
                             
                             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -58,8 +58,8 @@ class ReportViewController: UIViewController {
                         }
                         else
                         {
-                            let alert = UIAlertController(title: "Mi Profe en Casa", message:(response as! ReportModel).error_message, preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+                            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:(response as! ReportModel).error_message, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
                             self.present(alert, animated: true)
                         }
                     }
@@ -76,18 +76,18 @@ class ReportViewController: UIViewController {
         if(txtClassNumber.text == "")
         {
             txtClassNumber.becomeFirstResponder()
-            errorMessage = "Debe ingresar un número de clase"
+            errorMessage = NSLocalizedString("NO_CLASS_NUMBER", comment: "")
         }
         else if(txtExercicesSubject.text == "")
         {
             txtExercicesSubject.becomeFirstResponder()
-            errorMessage = "Debe ingresar los ejercicios realizados"
+            errorMessage = NSLocalizedString("NO_EXERCICES", comment: "")
         }
 
         else if(txtObservations.text == "")
         {
             txtObservations.becomeFirstResponder()
-            errorMessage = "Debe ingresar las observaciones"
+            errorMessage = NSLocalizedString("NO_OBSERVATIONS", comment: "")
         }
         
         if(errorMessage == "")
@@ -96,8 +96,8 @@ class ReportViewController: UIViewController {
         }
         else
         {
-            let alert = UIAlertController(title: "Mi Profe en Casa", message:errorMessage, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:errorMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
             self.present(alert, animated: true)
             return false
         }

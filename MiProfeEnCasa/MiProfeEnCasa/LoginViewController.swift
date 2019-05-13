@@ -28,16 +28,16 @@ class LoginViewController: UIViewController {
         
     @IBAction func btnContinueTap(_ sender: Any) {
         var errorMessage = ""
-        
+
         if(txtUserName.text == "" || !(Helpers.isValidEmail(testStr: txtUserName.text!)))
         {
             txtUserName.becomeFirstResponder()
-            errorMessage = "Por favor ingrese un E-Mail"
+            errorMessage = NSLocalizedString("NO_MAIL_ERROR", comment: "")
         }
         else if(txtPassword.text == "")
         {
             txtPassword.becomeFirstResponder()
-            errorMessage = "Por favor ingrese una Contraseña"
+            errorMessage = NSLocalizedString("NO_PASSWORD_ERROR", comment: "")
         }
         else
         {
@@ -61,8 +61,8 @@ class LoginViewController: UIViewController {
                         }
                         else
                         {
-                            let alert = UIAlertController(title: "Mi Profe en Casa", message:"Login Incorrecto, por favor revise los datos ingresados.", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+                            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:NSLocalizedString("LOGIN_ERROR", comment: ""), preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title:  NSLocalizedString("APP_NAME", comment: ""), style: .default, handler: nil))
                             self.present(alert, animated: true)
                         }
                     }
@@ -74,8 +74,8 @@ class LoginViewController: UIViewController {
         
         if(errorMessage != "")
         {
-            let alert = UIAlertController(title: "Mi Profe en Casa", message:errorMessage, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:errorMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title:  NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
             self.present(alert, animated: true)
         }
     }

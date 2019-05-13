@@ -183,7 +183,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Celular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="68H-2y-et6" customClass="GBTextField" customModule="GBFloatingTextField">
-                                                <rect key="frame" x="54" y="225" width="299" height="30"/>
+                                                <rect key="frame" x="56" y="225" width="297" height="30"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="By0-ic-R7O"/>
@@ -263,13 +263,6 @@
                                                     <constraint firstAttribute="width" constant="30" id="OJ1-2g-xW3"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_action_mail" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-JU-Jrk">
-                                                <rect key="frame" x="16" y="225" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="SiC-Ii-y4U"/>
-                                                    <constraint firstAttribute="width" constant="30" id="g3q-0W-iCY"/>
-                                                </constraints>
-                                            </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mi_profe" translatesAutoresizingMaskIntoConstraints="NO" id="i49-Bh-Mmg">
                                                 <rect key="frame" x="137.5" y="60" width="100" height="100"/>
                                                 <constraints>
@@ -292,12 +285,18 @@
                                                     <action selector="btnOkTap:" destination="eeZ-Kz-doF" eventType="touchUpInside" id="XNX-gT-bDP"/>
                                                 </connections>
                                             </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_phone" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-JU-Jrk">
+                                                <rect key="frame" x="16" y="233" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="SiC-Ii-y4U"/>
+                                                    <constraint firstAttribute="width" constant="20" id="g3q-0W-iCY"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Llt-uM-sfk" secondAttribute="trailing" constant="22" id="1dE-kG-cIL"/>
                                             <constraint firstItem="Llt-uM-sfk" firstAttribute="leading" secondItem="HcC-Dd-yfy" secondAttribute="trailing" constant="10" id="3jg-yh-heV"/>
-                                            <constraint firstItem="68H-2y-et6" firstAttribute="top" secondItem="Sap-JU-Jrk" secondAttribute="top" id="3r6-CV-AjM"/>
                                             <constraint firstItem="i49-Bh-Mmg" firstAttribute="centerX" secondItem="s5E-PP-VgW" secondAttribute="centerX" id="4d3-z1-1wo"/>
                                             <constraint firstItem="Os7-rP-txb" firstAttribute="centerX" secondItem="s5E-PP-VgW" secondAttribute="centerX" id="Dz9-S3-VlS"/>
                                             <constraint firstItem="Os7-rP-txb" firstAttribute="top" secondItem="Llt-uM-sfk" secondAttribute="bottom" constant="65" id="OL6-jM-73Y"/>
@@ -305,9 +304,10 @@
                                             <constraint firstItem="Llt-uM-sfk" firstAttribute="top" secondItem="68H-2y-et6" secondAttribute="bottom" constant="52" id="Tca-YN-Gnh"/>
                                             <constraint firstAttribute="bottom" secondItem="Os7-rP-txb" secondAttribute="bottom" constant="157" id="fQz-Lu-tV9"/>
                                             <constraint firstItem="HcC-Dd-yfy" firstAttribute="leading" secondItem="s5E-PP-VgW" secondAttribute="leading" constant="16" id="gXP-Yj-CXW"/>
-                                            <constraint firstItem="68H-2y-et6" firstAttribute="leading" secondItem="Sap-JU-Jrk" secondAttribute="trailing" constant="8" id="hwN-xc-uLN"/>
-                                            <constraint firstItem="HcC-Dd-yfy" firstAttribute="top" secondItem="Sap-JU-Jrk" secondAttribute="bottom" constant="52" id="jLC-Ab-mwn"/>
+                                            <constraint firstItem="68H-2y-et6" firstAttribute="leading" secondItem="Sap-JU-Jrk" secondAttribute="trailing" constant="20" id="hwN-xc-uLN"/>
                                             <constraint firstItem="Sap-JU-Jrk" firstAttribute="leading" secondItem="s5E-PP-VgW" secondAttribute="leading" constant="16" id="nif-0J-cmN"/>
+                                            <constraint firstItem="HcC-Dd-yfy" firstAttribute="top" secondItem="Sap-JU-Jrk" secondAttribute="bottom" constant="54" id="qGF-sZ-Fm8"/>
+                                            <constraint firstItem="Os7-rP-txb" firstAttribute="top" secondItem="HcC-Dd-yfy" secondAttribute="bottom" constant="65" id="w3i-xY-bUr"/>
                                             <constraint firstAttribute="trailing" secondItem="68H-2y-et6" secondAttribute="trailing" constant="22" id="ywC-Zb-BQY"/>
                                         </constraints>
                                     </view>
@@ -1012,6 +1012,7 @@
         <image name="ic_action_mail" width="64" height="64"/>
         <image name="ic_exit_to_app" width="36" height="36"/>
         <image name="ico_menu" width="9.0552148818969727" height="7.0674848556518555"/>
+        <image name="ico_phone" width="32" height="32"/>
         <image name="logo_mi_profe" width="112" height="172"/>
     </resources>
 </document>

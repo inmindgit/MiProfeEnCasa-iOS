@@ -21,11 +21,11 @@ class RequestListViewController: UIViewController, SWRevealViewControllerDelegat
         super.viewDidLoad()
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
-        self.tableView.register(UINib(nibName: "RequestListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")// register cell name
+        self.tableView.register(UINib(nibName: "RequestListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.navigationItem.hidesBackButton = true
-        self.title = "Solicitudes"
+        self.title = NSLocalizedString("REQUESTS", comment: "")
 
         NotificationCenter.default.addObserver(self, selector: #selector(self.deviceTokenAssociation), name: Notification.Name("FCMToken"), object: nil)
     
@@ -126,20 +126,20 @@ extension RequestListViewController : UITableViewDelegate, UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RequestListTableViewCell
         cell.lblCourse.text = self.requestList?.result?[indexPath.row].Cnombre
-        cell.lblAddress.text = "Prueba: " + (self.requestList?.result?[indexPath.row].UdireccionCalle)!
+        cell.lblAddress.text = (self.requestList?.result?[indexPath.row].UdireccionCalle)!
         cell.lblDescription.text = self.requestList?.result?[indexPath.row].Cdescripcion
         
         if let date = self.requestList?.result?[indexPath.row].SAfechaInicio
         {
-            cell.lblStartingDate.text = "Incio propuesto: " + Helpers.formatDateToShow(date:date)
+            cell.lblStartingDate.text = NSLocalizedString("START_CLASS", comment: "") + Helpers.formatDateToShow(date:date)
         }
         
         if let date = self.requestList?.result?[indexPath.row].SAfechaPrueba
         {
-            cell.lblTestDate.text = "Incio propuesto: " + Helpers.formatDateToShow(date:date)
+            cell.lblTestDate.text = NSLocalizedString("TEST_DATE", comment: "") + Helpers.formatDateToShow(date:date)
         }
         
-        cell.lblAmountOfClasesPerWeek.text = "Veces por semana: " +  String(self.requestList?.result?[indexPath.row].SAvecesPorSemana ?? 0)
+        cell.lblAmountOfClasesPerWeek.text = NSLocalizedString("CLASSES_PER_WEEK", comment: "") +  String(self.requestList?.result?[indexPath.row].SAvecesPorSemana ?? 0)
         
         cell.imgIcon.image = UIImage.init(named: Helpers.getRequestStatusImageName(requestStatus: (self.requestList?.result?[indexPath.row].estadoSolicitudMaestroId)!))
         

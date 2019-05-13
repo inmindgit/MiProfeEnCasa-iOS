@@ -38,19 +38,19 @@ extension MenuViewController : UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MenuTableViewCell
         
         if(indexPath.row == 0)
         {
-            cell.lblTitle.text = "Solicitudes"
+            cell.lblTitle.text = NSLocalizedString("REQUESTS", comment: "")
             cell.imgIcon.image = UIImage.init(named: "ic_home")
             return cell
         }
         else 
         {
-            cell.lblTitle.text = "Perfil"
+            cell.lblTitle.text = NSLocalizedString("PROFILE", comment: "")
             cell.imgIcon.image = UIImage.init(named: "ic_action_user")
             return cell
         }

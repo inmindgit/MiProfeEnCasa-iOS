@@ -1,0 +1,66 @@
+
+/* Class = "UIButton"; normalTitle = "CONTINUAR"; ObjectID = "3Eb-8N-7VD"; */
+"3Eb-8N-7VD.normalTitle" = "CONTINUAR";
+
+/* Class = "UITextField"; placeholder = "Celular"; ObjectID = "68H-2y-et6"; */
+"68H-2y-et6.placeholder" = "Celular";
+
+/* Class = "UIBarButtonItem"; title = "  "; ObjectID = "73d-AC-NfN"; */
+"73d-AC-NfN.title" = "  ";
+
+/* Class = "UITextField"; placeholder = "E-mail"; ObjectID = "Llt-uM-sfk"; */
+"Llt-uM-sfk.placeholder" = "E-mail";
+
+/* Class = "UILabel"; text = "Le enviaremos un correo electrónico con el link para cambiar su contraseña"; ObjectID = "NNx-KW-5FW"; */
+"NNx-KW-5FW.text" = "Le enviaremos un correo electrónico con el link para cambiar su contraseña";
+
+/* Class = "UIButton"; normalTitle = "LISTO"; ObjectID = "Os7-rP-txb"; */
+"Os7-rP-txb.normalTitle" = "LISTO";
+
+/* Class = "UITextField"; placeholder = "Ingrese los temas de ejercicios"; ObjectID = "Uzt-xj-7sE"; */
+"Uzt-xj-7sE.placeholder" = "Ingrese los temas de ejercicios";
+
+/* Class = "UIButton"; normalTitle = "Salir"; ObjectID = "WUV-ek-CnE"; */
+"WUV-ek-CnE.normalTitle" = "Salir";
+
+/* Class = "UITextField"; placeholder = "Observaciones"; ObjectID = "YJg-Vg-zjB"; */
+"YJg-Vg-zjB.placeholder" = "Observaciones";
+
+/* Class = "UITextField"; placeholder = "E-Mail"; ObjectID = "aI3-s2-lLa"; */
+"aI3-s2-lLa.placeholder" = "E-Mail";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "bFr-EN-qXq"; */
+"bFr-EN-qXq.title" = "Title";
+
+/* Class = "UITextField"; placeholder = "Deberes para la próxima clase"; ObjectID = "bPU-bl-SX5"; */
+"bPU-bl-SX5.placeholder" = "Deberes para la próxima clase";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "ckQ-zB-hps"; */
+"ckQ-zB-hps.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "REESTABLECER"; ObjectID = "fV1-pm-8qi"; */
+"fV1-pm-8qi.normalTitle" = "REESTABLECER";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "gQl-On-GJN"; */
+"gQl-On-GJN.title" = "Title";
+
+/* Class = "UIButton"; normalTitle = "LISTO"; ObjectID = "jXy-4d-7Ef"; */
+"jXy-4d-7Ef.normalTitle" = "LISTO";
+
+/* Class = "UIButton"; normalTitle = "¿Restablecer contraseña?"; ObjectID = "l6e-MY-o5M"; */
+"l6e-MY-o5M.normalTitle" = "¿Restablecer contraseña?";
+
+/* Class = "UITextField"; placeholder = "Aclaraciones"; ObjectID = "nBZ-aY-uwl"; */
+"nBZ-aY-uwl.placeholder" = "Aclaraciones";
+
+/* Class = "UILabel"; text = "Hizo los deberes"; ObjectID = "nq8-Ch-LdC"; */
+"nq8-Ch-LdC.text" = "Hizo los deberes";
+
+/* Class = "UITextField"; placeholder = "Contraseña"; ObjectID = "p3g-mN-x3Z"; */
+"p3g-mN-x3Z.placeholder" = "Contraseña";
+
+/* Class = "UITextField"; placeholder = "Ingrese el número de la clase"; ObjectID = "p7j-LE-vu0"; */
+"p7j-LE-vu0.placeholder" = "Ingrese el número de la clase";
+
+/* Class = "UITextField"; placeholder = "E-Mail"; ObjectID = "sei-Jv-PTT"; */
+"sei-Jv-PTT.placeholder" = "E-Mail";

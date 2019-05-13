@@ -103,11 +103,11 @@ class ScheduleTableViewCell: UITableViewCell, TimePeriodTableViewCellDelegate {
             
             if(requestStatus == Constants.RequestStatus.kRequestPreAccepted)
             {
-                self.lblPendingRequest.text = "Pendiente de aceptación del alumno"
+                self.lblPendingRequest.text = NSLocalizedString("PAYMENT_ACCPETANCE_BY_STUDENT", comment: "")
             }
             else
             {
-                self.lblPendingRequest.text = "Pago pendiente de aceptación"
+                self.lblPendingRequest.text = NSLocalizedString("PAYMENT_ACCEPTANCE", comment: "")
             }
         }
         else if(requestStatus == Constants.RequestStatus.kRequestAccepted || requestStatus == Constants.RequestStatus.kRequestEnded)
@@ -117,14 +117,14 @@ class ScheduleTableViewCell: UITableViewCell, TimePeriodTableViewCellDelegate {
             self.lblPendingRequest.isHidden = true
             self.tableView.isHidden = true
             self.tableViewHeightConstraint.constant = 0
-            
+        
             if(requestStatus == Constants.RequestStatus.kRequestAccepted)
             {
-                self.btnLoadTimeOrAddReport.setTitle("CARGAR HORAS", for: .normal)
+                self.btnLoadTimeOrAddReport.setTitle(NSLocalizedString("LOAD_TIME", comment: ""), for: .normal)
             }
             else
             {
-                self.btnLoadTimeOrAddReport.setTitle("INGRESAR INFORME", for: .normal)
+                self.btnLoadTimeOrAddReport.setTitle(NSLocalizedString("LOAD_REPORT", comment: ""), for: .normal)
             }
             
         }
@@ -134,20 +134,17 @@ class ScheduleTableViewCell: UITableViewCell, TimePeriodTableViewCellDelegate {
         return 0
     }
     
-    
     fileprivate func segmentioContent() -> [SegmentioItem] {
         return [
-            SegmentioItem(title: "L", image:nil),
-            SegmentioItem(title: "M", image:nil),
-            SegmentioItem(title: "M", image:nil),
-            SegmentioItem(title: "J", image:nil),
-            SegmentioItem(title: "V", image:nil),
-            SegmentioItem(title: "S", image:nil),
-            SegmentioItem(title: "D", image:nil)
+            SegmentioItem(title: NSLocalizedString("MONDAY", comment: ""), image:nil),
+            SegmentioItem(title: NSLocalizedString("TUESDAY", comment: ""), image:nil),
+            SegmentioItem(title: NSLocalizedString("WEDNESDAY", comment: ""), image:nil),
+            SegmentioItem(title: NSLocalizedString("THURSDAY", comment: ""), image:nil),
+            SegmentioItem(title: NSLocalizedString("FRIDAY", comment: ""), image:nil),
+            SegmentioItem(title: NSLocalizedString("SATURDAY", comment: ""), image:nil),
+            SegmentioItem(title: NSLocalizedString("SUNDAY", comment: ""), image:nil)
         ]
     }
-    
-    
     
     fileprivate func segmentioOptions() -> SegmentioOptions {
         return SegmentioOptions(
@@ -236,6 +233,21 @@ class ScheduleTableViewCell: UITableViewCell, TimePeriodTableViewCellDelegate {
             }
         }
     }
+    
+    func manageTableViewItems(schedule: [ScheduleModel]) -> Int
+    {
+        self.displayedAvailableTimes = schedule
+        if(schedule.count == 0)
+        {
+             tableView.setEmptyView(title: NSLocalizedString("NO_TIME_AVAILABLE", comment: ""))
+            return 0
+        }
+        else
+        {
+            tableView.restore()
+            return schedule.count
+        }
+    }
 }
 
 extension ScheduleTableViewCell : UITableViewDelegate, UITableViewDataSource
@@ -243,101 +255,31 @@ extension ScheduleTableViewCell : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(daysSegmentedController.selectedSegmentioIndex == Days.kMonday)
         {
-            self.displayedAvailableTimes = self.mondayAvailableTimes
-            if(mondayAvailableTimes.count == 0)
-            {
-                tableView.setEmptyView(title: "No hay horarios para este dia")
-            }
-            else
-            {
-                tableView.restore()
-            }
-            
-            return mondayAvailableTimes.count
+            return self.manageTableViewItems(schedule: self.mondayAvailableTimes)
         }
         else if(daysSegmentedController.selectedSegmentioIndex == Days.kTuesday)
         {
-            self.displayedAvailableTimes = self.tuesdayAvailableTimes
-            if(tuesdayAvailableTimes.count == 0)
-            {
-                tableView.setEmptyView(title: "No hay horarios para este dia")
-            }
-            else
-            {
-                tableView.restore()
-            }
-            
-            return tuesdayAvailableTimes.count
+            return self.manageTableViewItems(schedule: self.tuesdayAvailableTimes)
         }
         else if(daysSegmentedController.selectedSegmentioIndex == Days.kWednesday)
         {
-            self.displayedAvailableTimes = self.wednesdayAvailableTimes
-            if(wednesdayAvailableTimes.count == 0)
-            {
-                tableView.setEmptyView(title: "No hay horarios para este dia")
-            }
-            else
-            {
-                tableView.restore()
-            }
-            
-            return wednesdayAvailableTimes.count
+            return self.manageTableViewItems(schedule: self.wednesdayAvailableTimes)
         }
         else if(daysSegmentedController.selectedSegmentioIndex == Days.kThursday)
         {
-            self.displayedAvailableTimes = self.thursdayAvailableTimes
-            if(thursdayAvailableTimes.count == 0)
-            {
-                tableView.setEmptyView(title: "No hay horarios para este dia")
-            }
-            else
-            {
-                tableView.restore()
-            }
-            
-            return thursdayAvailableTimes.count
+            return self.manageTableViewItems(schedule: self.thursdayAvailableTimes)
         }
         else if(daysSegmentedController.selectedSegmentioIndex == Days.kFriday)
         {
-            self.displayedAvailableTimes = self.fridayAvailableTimes
-            if(fridayAvailableTimes.count == 0)
-            {
-                tableView.setEmptyView(title: "No hay horarios para este dia")
-            }
-            else
-            {
-                tableView.restore()
-            }
-            
-            return fridayAvailableTimes.count
+            return self.manageTableViewItems(schedule: self.fridayAvailableTimes)
         }
         else if(daysSegmentedController.selectedSegmentioIndex == Days.kSaturday)
         {
-            self.displayedAvailableTimes = self.saturdayAvailableTimes
-            if(saturdayAvailableTimes.count == 0)
-            {
-                tableView.setEmptyView(title: "No hay horarios para este dia")
-            }
-            else
-            {
-                tableView.restore()
-            }
-            
-            return saturdayAvailableTimes.count
+            return self.manageTableViewItems(schedule: self.saturdayAvailableTimes)
         }
         else if(daysSegmentedController.selectedSegmentioIndex == Days.kSunday)
         {
-            self.displayedAvailableTimes = self.sundayAvailableTimes
-            if(sundayAvailableTimes.count == 0)
-            {
-                tableView.setEmptyView(title: "No hay horarios para este dia")
-            }
-            else
-            {
-                tableView.restore()
-            }
-            
-            return sundayAvailableTimes.count
+            return self.manageTableViewItems(schedule: self.sundayAvailableTimes)
         }
         else
         {
@@ -351,34 +293,7 @@ extension ScheduleTableViewCell : UITableViewDelegate, UITableViewDataSource
         cell.delegate = self
         cell.index = indexPath.row
         
-        if(daysSegmentedController.selectedSegmentioIndex == Days.kMonday)
-        {
-            cell.lblTime.text = mondayAvailableTimes[indexPath.row].horarioComienzo! + "    -    " + mondayAvailableTimes[indexPath.row].horarioFin!
-        }
-        else if(daysSegmentedController.selectedSegmentioIndex == Days.kTuesday)
-        {
-            cell.lblTime.text = tuesdayAvailableTimes[indexPath.row].horarioComienzo! + "    -    " + tuesdayAvailableTimes[indexPath.row].horarioFin!
-        }
-        else if(daysSegmentedController.selectedSegmentioIndex == Days.kWednesday)
-        {
-            cell.lblTime.text = wednesdayAvailableTimes[indexPath.row].horarioComienzo! + "    -    " + wednesdayAvailableTimes[indexPath.row].horarioFin!
-        }
-        else if(daysSegmentedController.selectedSegmentioIndex == Days.kThursday)
-        {
-            cell.lblTime.text = thursdayAvailableTimes[indexPath.row].horarioComienzo! + "    -    " + thursdayAvailableTimes[indexPath.row].horarioFin!
-        }
-        else if(daysSegmentedController.selectedSegmentioIndex == Days.kFriday)
-        {
-            cell.lblTime.text = fridayAvailableTimes[indexPath.row].horarioComienzo! + "    -    " + fridayAvailableTimes[indexPath.row].horarioFin!
-        }
-        else if(daysSegmentedController.selectedSegmentioIndex == Days.kSaturday)
-        {
-            cell.lblTime.text = saturdayAvailableTimes[indexPath.row].horarioComienzo! + "    -    " + saturdayAvailableTimes[indexPath.row].horarioFin!
-        }
-        else if(daysSegmentedController.selectedSegmentioIndex == Days.kSunday)
-        {
-            cell.lblTime.text = sundayAvailableTimes[indexPath.row].horarioComienzo! + "    -    " + sundayAvailableTimes[indexPath.row].horarioFin!
-        }
+        cell.lblTime.text = self.displayedAvailableTimes[indexPath.row].horarioComienzo! + "    -    " + self.displayedAvailableTimes[indexPath.row].horarioFin!
         
         return cell
     }

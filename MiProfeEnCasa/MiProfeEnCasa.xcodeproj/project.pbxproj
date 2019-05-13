@@ -10,6 +10,9 @@
 		007F96771BB8C57CD79D921B /* Pods_MiProfeEnCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F4C7DE37CA6B706D73E20F /* Pods_MiProfeEnCasa.framework */; };
 		4211C131227C8C8A009667C8 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4211C12F227C8C8A009667C8 /* ApiManager.swift */; };
 		4211C132227C8C8A009667C8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4211C130227C8C8A009667C8 /* Models.swift */; };
+		423038262289F207008E855F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423038242289F206008E855F /* Crashlytics.framework */; };
+		423038272289F207008E855F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423038252289F206008E855F /* Fabric.framework */; };
+		423B310A2289E15500808018 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 423B310C2289E15500808018 /* Localizable.strings */; };
 		42636C4F22832AD3004C0AFF /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42636C4D22832AD3004C0AFF /* ScheduleTableViewCell.swift */; };
 		42636C5022832AD3004C0AFF /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42636C4E22832AD3004C0AFF /* ScheduleTableViewCell.xib */; };
 		42636C5322832FF0004C0AFF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42636C5222832FF0004C0AFF /* Extensions.swift */; };
@@ -19,7 +22,6 @@
 		42B3E80F227CB6A2007C02F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B3E80E227CB6A2007C02F0 /* Constants.swift */; };
 		42B3E81222807B87007C02F0 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B3E81122807B87007C02F0 /* Helpers.swift */; };
 		42E464492278A0AB0004CC91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E464482278A0AB0004CC91 /* AppDelegate.swift */; };
-		42E4644B2278A0AB0004CC91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E4644A2278A0AB0004CC91 /* ViewController.swift */; };
 		42E4644E2278A0AB0004CC91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E4644C2278A0AB0004CC91 /* Main.storyboard */; };
 		42E464502278A0AD0004CC91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E4644F2278A0AD0004CC91 /* Assets.xcassets */; };
 		42E464532278A0AD0004CC91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E464512278A0AD0004CC91 /* LaunchScreen.storyboard */; };
@@ -47,6 +49,12 @@
 		3A67990208BE6D138548FC8F /* Pods-MiProfeEnCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiProfeEnCasa.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiProfeEnCasa/Pods-MiProfeEnCasa.release.xcconfig"; sourceTree = "<group>"; };
 		4211C12F227C8C8A009667C8 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		4211C130227C8C8A009667C8 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		423038242289F206008E855F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		423038252289F206008E855F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		423B31062289E0E300808018 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		423B31072289E0E300808018 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		423B310B2289E15500808018 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		423B310D2289E15900808018 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		42636C4D22832AD3004C0AFF /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		42636C4E22832AD3004C0AFF /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		42636C5222832FF0004C0AFF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -58,7 +66,6 @@
 		42B3E81122807B87007C02F0 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		42E464452278A0AB0004CC91 /* MiProfeEnCasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiProfeEnCasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E464482278A0AB0004CC91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42E4644A2278A0AB0004CC91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42E4644D2278A0AB0004CC91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42E4644F2278A0AD0004CC91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42E464522278A0AD0004CC91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,7 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423038262289F207008E855F /* Crashlytics.framework in Frameworks */,
 				007F96771BB8C57CD79D921B /* Pods_MiProfeEnCasa.framework in Frameworks */,
+				423038272289F207008E855F /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +127,6 @@
 			children = (
 				426CD54622860536006C68A2 /* MiProfeEnCasa.entitlements */,
 				42E464482278A0AB0004CC91 /* AppDelegate.swift */,
-				42E4644A2278A0AB0004CC91 /* ViewController.swift */,
 				42E4646F2278DBEF0004CC91 /* LoginViewController.swift */,
 				42E4645F2278BE3D0004CC91 /* RequestListViewController.swift */,
 				42E4646D2278D8740004CC91 /* RequestDetailViewController.swift */,
@@ -134,7 +142,10 @@
 				42E4644C2278A0AB0004CC91 /* Main.storyboard */,
 				42E4645A2278BDEF0004CC91 /* CustomControls */,
 				42E4644F2278A0AD0004CC91 /* Assets.xcassets */,
+				423038242289F206008E855F /* Crashlytics.framework */,
+				423038252289F206008E855F /* Fabric.framework */,
 				42E464512278A0AD0004CC91 /* LaunchScreen.storyboard */,
+				423B310C2289E15500808018 /* Localizable.strings */,
 				42E464542278A0AD0004CC91 /* Info.plist */,
 				426CD54722860E10006C68A2 /* GoogleService-Info.plist */,
 			);
@@ -191,6 +202,7 @@
 				42E464422278A0AB0004CC91 /* Frameworks */,
 				42E464432278A0AB0004CC91 /* Resources */,
 				3BF0DBE7EF95BED643070D26 /* [CP] Embed Pods Frameworks */,
+				423B310F2289F06200808018 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -245,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42E464532278A0AD0004CC91 /* LaunchScreen.storyboard in Resources */,
+				423B310A2289E15500808018 /* Localizable.strings in Resources */,
 				42E4645E2278BE220004CC91 /* RequestListTableViewCell.xib in Resources */,
 				42E464642278CF5A0004CC91 /* CourseBasicDataTableViewCell.xib in Resources */,
 				42E4646C2278D4950004CC91 /* ImageTableViewHeader.xib in Resources */,
@@ -309,6 +322,23 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiProfeEnCasa/Pods-MiProfeEnCasa-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		423B310F2289F06200808018 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run fa54433c572532263a2736e8ff864a2d6674af2e 061209bb1f23a5e36bdebab363633ee5eb4c686c7f75363c91d1f6cb4b9ed3a0\n";
+		};
 		5D2602FF26C7C9CAF202C5B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,7 +374,6 @@
 				42E4647A227B6DFF0004CC91 /* MenuTableViewCell.swift in Sources */,
 				42E4645D2278BE220004CC91 /* RequestListTableViewCell.swift in Sources */,
 				42E46482227B8F280004CC91 /* ProfileViewController.swift in Sources */,
-				42E4644B2278A0AB0004CC91 /* ViewController.swift in Sources */,
 				42E46477227B40680004CC91 /* MenuViewController.swift in Sources */,
 				42636C5322832FF0004C0AFF /* Extensions.swift in Sources */,
 				42B3E80F227CB6A2007C02F0 /* Constants.swift in Sources */,
@@ -365,10 +394,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		423B310C2289E15500808018 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				423B310B2289E15500808018 /* es-419 */,
+				423B310D2289E15900808018 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		42E4644C2278A0AB0004CC91 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				42E4644D2278A0AB0004CC91 /* Base */,
+				423B31062289E0E300808018 /* es-419 */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -377,6 +416,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				42E464522278A0AD0004CC91 /* Base */,
+				423B31072289E0E300808018 /* es-419 */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -388,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -449,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -507,7 +549,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MiProfeEnCasa/MiProfeEnCasa.entitlements;
 				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = F8RL2MHL9J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MiProfeEnCasa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -530,6 +577,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = F8RL2MHL9J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MiProfeEnCasa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -537,7 +588,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inmind.MiProfeEnCasa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "MPEC Production Provisioning Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "MPEC AdHoc Provisioning Profile";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
