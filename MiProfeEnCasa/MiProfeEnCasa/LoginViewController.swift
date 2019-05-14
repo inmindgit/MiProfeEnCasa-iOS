@@ -82,8 +82,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnNewPasswordTap(_ sender: Any) {
         let  recoverPasswordViewController = self.storyboard?.instantiateViewController(withIdentifier: "RecoverPasswordViewController") as! RecoverPasswordViewController
-        
         self.navigationController?.pushViewController(recoverPasswordViewController, animated: true)
+
     }
     
 }

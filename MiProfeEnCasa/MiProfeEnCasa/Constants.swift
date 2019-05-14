@@ -27,13 +27,13 @@ struct Constants {
     
     struct RequestStatus
     {
-        static let kRequestAccepted = 3
-        static let kRequestPreAccepted = 9
         static let kRequestNotReaded = 1
         static let kRequestReaded = 2
+        static let kRequestAccepted = 3
+        static let kRequestPendingPayment = 5
         static let kRequestEnded = 7
         static let kRequestExecuted = 8
-        static let kRequestPendingPayment = 5
+        static let kRequestPreAccepted = 9
     }
 }
 

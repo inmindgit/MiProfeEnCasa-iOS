@@ -6,35 +6,40 @@
   Copyright © 2019 Juan Arrillaga. All rights reserved.
 */
 
-"NO_MAIL_ERROR" = "Por favor ingrese un E-Mail";
-"NO_PASSWORD_ERROR" = "Por favor ingrese una Contraseña";
+"NO_MAIL_ERROR" = "Por favor ingrese un E-Mail.";
+"NO_PASSWORD_ERROR" = "Por favor ingrese una Contraseña.";
 "LOGIN_ERROR" = "Login Incorrecto, por favor revise los datos ingresados.";
 "APP_NAME" = "Mi Profe en Casa";
 "ACCEPT" = "Aceptar";
 
-"START_CLASS" = "Incio propuesto: ";
+"START_CLASS_PROPOSAL" = "Incio propuesto: ";
+"START_CLASS" = "Incio curso: ";
+"START_CLASS_PROPOSAL_DATE" = "Fecha de Inicio propuesto";
+"START_CLASS_DATE" = "Fecha de Inicio";
+
 "CLASSES_PER_WEEK" = "Veces por semana: ";
 "TEST_DATE" = "Prueba: ";
 
-"RANGE_SELECTION_ERROR" = "Debe elegir una hora de comienzo dentro del rango elegido";
-"TIME_SELECTION_ERROR" = "Debe elegir una cantidad de tiempo superior o igual a 1:30 horas";
+"RANGE_SELECTION_ERROR" = "Debe elegir una hora de comienzo dentro del rango elegido.";
+"TIME_SELECTION_ERROR" = "Debe elegir una cantidad de tiempo superior o igual a 1:30 horas.";
 "REQUESTS" = "Solicitudes";
 "PROFILE" = "Perfil";
 
+
 "RESET_PASSWORD" = "Restablecer contraseña";
-"REQUEST_SUCCESSFULLY" = "Solicitud procesada con éxito";
+"REQUEST_SUCCESSFULLY" = "Solicitud procesada con éxito.";
 
-"NO_MOBLE_ERROR" = "Por favor ingrese un Celular";
+"NO_MOBLE_ERROR" = "Por favor ingrese un Celular.";
 
-"PROFILE_UNSUCCESSFULLY" = "El Perfil no ha sido actualizado, por favor verifique";
+"PROFILE_UNSUCCESSFULLY" = "El Perfil no ha sido actualizado, por favor verifique.";
 "REQUESTS" = "Solicitudes";
 "REPORT" = "Informe";
 
-"REPORT_SUCCESSFULLY" = "Reporte enviado con éxito";
-"NO_CLASS_NUMBER" = "Debe ingresar un número de clase";
-"NO_EXERCICES" = "Debe ingresar los ejercicios realizados";
-"NO_OBSERVATIONS" = "Debe ingresar las observaciones";
-
+"REPORT_SUCCESSFULLY" = "Reporte enviado con éxito.";
+"NO_CLASS_NUMBER" = "Debe ingresar un número de clase.";
+"NO_EXERCICES" = "Debe ingresar los ejercicios realizados.";
+"NO_OBSERVATIONS" = "Debe ingresar las observaciones.";
+"CLASS_NUMBER_ERROR" = "Debe ingresar un número mayor o igual a 1.";
 "REQUEST_DETAIL" = "Detalle de solicitud";
 
 "MOBILE" = "Celular";
@@ -58,3 +63,8 @@
 "SUNDAY" = "D";
 
 "NO_TIME_AVAILABLE" = "No hay horarios para este dia";
+
+"REQUEST_TIME_SELECTED" = "Ud. esta aceptando la solicitud de clase para la hora seleccionada. La solicitud quedará pendiente de aprobación por parte del alumno.";
+
+
+"LOAD_TIME_UNAVAILABLE" = "Aún no está disponible la carga de horas. Espere a realizar la clase.";

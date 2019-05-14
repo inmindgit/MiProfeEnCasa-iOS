@@ -35,6 +35,7 @@ class ScheduleTableViewCell: UITableViewCell, TimePeriodTableViewCellDelegate {
     @IBOutlet weak var lblPendingRequestHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var lblTestDate: UILabel!
     @IBOutlet weak var lblStartingDate: UILabel!
+    @IBOutlet weak var lblStartingDateTooltip: UILabel!
     
     var mondayAvailableTimes = [ScheduleModel]()
     var tuesdayAvailableTimes = [ScheduleModel]()

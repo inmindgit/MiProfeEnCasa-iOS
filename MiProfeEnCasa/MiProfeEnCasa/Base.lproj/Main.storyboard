@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Iho-Kp-xOi">
             <objects>
-                <navigationController id="0p9-bQ-sZO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigationController" id="0p9-bQ-sZO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cEU-Jl-tgV">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -811,7 +811,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z6M-Aj-d5M">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z6M-Aj-d5M">
                                                 <rect key="frame" x="312" y="194" width="49" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="OqA-fa-jdj"/>
@@ -933,7 +933,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="VoI-Yc-j6S"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                                <state key="normal" title="LISTO">
+                                                <state key="normal" title="ENVIAR INFORME">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>

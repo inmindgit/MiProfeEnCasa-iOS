@@ -43,23 +43,31 @@ class ApiManager
         headers = ["Content-Type":"application/x-www-form-urlencoded","AuthToken":"ApxnHCG/NmmqRN9NA+IHOKtsPj6I/UJlfw64mbW3nPjQ"]
         
      
-        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.light)
-        SVProgressHUD.setBackgroundColor(UIColor.clear)
-        SVProgressHUD.setForegroundColor(UIColor(red: 255/255.0, green: 136.0/255.0, blue: 0/255.0, alpha: 1))
-        SVProgressHUD.show()
-        
+        if(showHud)
+        {
+            SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.light)
+            SVProgressHUD.setBackgroundColor(UIColor.clear)
+            SVProgressHUD.setForegroundColor(UIColor(red: 255/255.0, green: 136.0/255.0, blue: 0/255.0, alpha: 1))
+            SVProgressHUD.show()
+        }
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         self.executeHttpFunction(type: type, headers: headers, operation: operation, onCompletion: { (response:AnyObject?) in
             if(response != nil)
             {
-                SVProgressHUD.dismiss()
+                if(self.showHud)
+                {
+                    SVProgressHUD.dismiss()
+                }
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 onCompletion(response)
             }
             else
             {
-                SVProgressHUD.dismiss()
+                if(self.showHud)
+                {
+                    SVProgressHUD.dismiss()
+                }
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 onCompletion(response as! NSError?)
             }
@@ -156,17 +164,6 @@ class ApiManager
                 
             }
         }
-   
-            /*
-            getManager.responseString { (response: DataResponse<String>) in
-                switch response.result {
-                case .success:
-                    onCompletion(response.result.value as AnyObject)
-                case .failure(let error):
-                    onCompletion(error as NSError?)
-                }
-            }
- */
         else
         {
             getManager.responseObject { (response: DataResponse<T>) in

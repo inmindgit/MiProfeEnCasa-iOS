@@ -12,6 +12,8 @@ import UIKit
 class Helpers{
     
     static var tokenIdForPushNofifications: String?
+    static var requestId: String?
+    static var requestAccepted: Bool?
     
     static func getStringParameter(parameter:String) -> String
     {
@@ -56,7 +58,7 @@ class Helpers{
         case Constants.RequestStatus.kRequestReaded:
             return "ic_eye"
         case Constants.RequestStatus.kRequestEnded:
-            return ""
+            return "ico_report"
         case Constants.RequestStatus.kRequestExecuted:
             return "ic_double_check"
         case Constants.RequestStatus.kRequestPendingPayment:
@@ -117,6 +119,40 @@ class Helpers{
             return true
         }
     }
+    
+    static func validateClassTime(startingDate: String) -> Bool
+    {
+        var formattedDate = String()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        
+        let date = dateFormatter.date(from:startingDate)!
+        
+        let today = Date()
+        
+        if(today.compare(date)  == .orderedDescending)
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
+    
+    /*
+     public static boolean validaDisponibilidadCargaHoras(String fechaInicio){
+     String fechaFormateada = "";
+     try {
+     SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+     Date fechaClase = dt.parse(fechaInicio);
+     Date fechaHoy=new Date();
+     return fechaClase.compareTo(fechaHoy)<=0;
+     } catch (Exception e) {
+     return false;
+     }
+     }
+    */
     
     static func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"

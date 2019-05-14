@@ -12,7 +12,11 @@
 "APP_NAME" = "Mi Profe en Casa";
 "ACCEPT" = "Aceptar";
 
-"START_CLASS" = "Incio propuesto: ";
+"START_CLASS_PROPOSAL" = "Incio propuesto: ";
+"START_CLASS" = "Incio curso: ";
+"START_CLASS_PROPOSAL_DATE" = "Fecha de Inicio propuesto";
+"START_CLASS_DATE" = "Fecha de Inicio";
+
 "CLASSES_PER_WEEK" = "Veces por semana: ";
 "TEST_DATE" = "Prueba: ";
 
@@ -35,7 +39,7 @@
 "NO_CLASS_NUMBER" = "Debe ingresar un número de clase";
 "NO_EXERCICES" = "Debe ingresar los ejercicios realizados";
 "NO_OBSERVATIONS" = "Debe ingresar las observaciones";
-
+"CLASS_NUMBER_ERROR" = "Debe ingresar un número mayor o igual a 1";
 "REQUEST_DETAIL" = "Detalle de solicitud";
 
 "MOBILE" = "Celular";
@@ -59,3 +63,10 @@
 "SUNDAY" = "D";
 
 "NO_TIME_AVAILABLE" = "No hay horarios para este dia";
+
+"REQUEST_TIME_SELECTED" = "Ud. esta aceptando la solicitud de clase para la hora seleccionada. La solicitud quedará pendiente de aprobación por parte del alumno.";
+
+
+"LOAD_TIME_UNAVAILABLE" = "Aún no está disponible la carga de horas. Espere a realizar la clase.";
+
+

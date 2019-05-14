@@ -33,23 +33,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "RequestListViewController.tableView(_:cellForRowAt:):RequestListViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.requestList?.result?[indexPath.row].ClSMId">
-            </PersistentString>
-            <PersistentString
-               value = "self.requestList?.result?[indexPath.row].SAfechaInicio">
-            </PersistentString>
-            <PersistentString
-               value = "indexPath.row">
-            </PersistentString>
-            <PersistentString
-               value = "date">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "RequestDetailViewController.setAmountOfHours():RequestDetailViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -80,6 +63,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #2 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "RequestDetailViewController.calculateHoursInterval():RequestDetailViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -87,14 +78,6 @@
             </PersistentString>
             <PersistentString
                value = "startTime">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #2 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "response.result.value">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -214,6 +197,25 @@
             </PersistentString>
             <PersistentString
                value = "self.request?.horarios!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportViewController.validateData():ReportViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "txtClassNumber.text">
+            </PersistentString>
+            <PersistentString
+               value = "txtClassNumber.text == &quot;&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.btnNewPasswordTap(_:):LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

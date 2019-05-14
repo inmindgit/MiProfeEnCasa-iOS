@@ -52,6 +52,7 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
     {
         tableView.register(UINib(nibName: "CourseBasicDataTableViewCell", bundle: nil), forCellReuseIdentifier: "cellBasic")
         tableView.register(UINib(nibName: "CourseAddressTableViewCell", bundle: nil), forCellReuseIdentifier: "cellAddress")
+        tableView.register(UINib(nibName: "CourseContactDataTableViewCell", bundle: nil), forCellReuseIdentifier: "cellContact")
         tableView.register(UINib(nibName: "ScheduleTableViewCell", bundle: nil), forCellReuseIdentifier: "cellSchedule")
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -117,7 +118,7 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
         let claseId = self.request?.claseId
         let hours =  self.pickerHours[0][self.hourPicker.selectedRow(inComponent: 0)]
         let minutes = self.pickerHours[1][hourPicker.selectedRow(inComponent: 1)]
-        
+
         if(Helpers.validateMinimunTimeRequest(selectedHour: Int(hours)!, selectedMinutes: Int(minutes)!))
         {
             ApiManager.sharedInstance.queryParameters = "claseId=" + String(claseId ?? 0) + "&cantidadHoras=" + hours + "." + minutes
@@ -151,7 +152,6 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
             alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
             self.present(alert, animated: true)
         }
-      
     }
     
     func setStartingClassTime(dateAndHour : String)
@@ -160,8 +160,7 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
         let fecha = self.request?.SAfechaInicio
         let horaComienzo = dateAndHour
         
-        let primeraClase =  ["fecha":fecha,
-                         "horaComienzo":horaComienzo]
+        let primeraClase =  ["fecha":fecha, "horaComienzo":horaComienzo]
         
         if let theJSONData = try? JSONSerialization.data(withJSONObject: primeraClase,options: []) {
             let theJSONText = String(data: theJSONData,
@@ -176,8 +175,16 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
                     else if response is RequestAcceptModel {
                         if((response as! RequestAcceptModel).code == 1)
                         {
-                            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                            appDelegate.changeRootViewControllerToSWRevealViewController()
+                            
+                            let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message: NSLocalizedString("REQUEST_TIME_SELECTED", comment: ""), preferredStyle: UIAlertController.Style.alert)
+                            
+                            let acceptAction: UIAlertAction = UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .cancel) { action -> Void in
+                                let  requestListViewController = self.storyboard?.instantiateViewController(withIdentifier: "RequestListViewController") as! RequestListViewController
+                                self.navigationController?.pushViewController(requestListViewController, animated: true)
+                            }
+                            alert.addAction(acceptAction)
+                            self.present(alert, animated: true, completion: nil)
+
                         }
                         else
                         {
@@ -198,6 +205,7 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
     
     func loadTimeOrAddReport() {
         self.isClassHourPickerSelection = false
+        
         if((self.request?.estadoSolicitudMaestroId)! == Constants.RequestStatus.kRequestEnded)
         {
             let  reportViewController = self.storyboard?.instantiateViewController(withIdentifier: "ReportViewController") as! ReportViewController
@@ -208,7 +216,17 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
         }
         else
         {
-            self.txtPickerDispaly.becomeFirstResponder()
+            if(Helpers.validateClassTime(startingDate: (self.request?.SAfechaInicio)!))
+            {
+                self.txtPickerDispaly.becomeFirstResponder()
+            }
+            else
+            {
+                let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:NSLocalizedString("LOAD_TIME_UNAVAILABLE", comment: ""), preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
+                
         }
     }
     
@@ -261,12 +279,29 @@ extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSour
         }
         else if(indexPath.row == 1)
         {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellAddress", for: indexPath) as! CourseAddressTableViewCell
-            if(self.request?.UdireccionCalle != nil && self.request?.UdireccionEsquina != nil)
+            if(self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestNotReaded || self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestReaded || self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestReaded )
             {
-                cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                let cell = tableView.dequeueReusableCell(withIdentifier: "cellAddress", for: indexPath) as! CourseAddressTableViewCell
+                if(self.request?.UdireccionCalle != nil && self.request?.UdireccionEsquina != nil)
+                {
+                    cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                }
+                return cell
             }
-            return cell
+            else
+            {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "cellContact", for: indexPath) as! CourseContactDataTableViewCell
+                
+                if(self.request?.UdireccionCalle != nil && self.request?.UdireccionEsquina != nil)
+                {
+                    cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                }
+                
+                cell.lblStudentName.text = (self.request?.Unombre)! + " " + (self.request?.Uapellido)!
+                cell.lblPhone.text = self.request?.Ucelular!
+                
+                return cell
+            }
         }
         else
         {
@@ -285,6 +320,20 @@ extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSour
                 cell.lblStartingDate.text = Helpers.formatDateToShow(date:date)
             }
             
+            if let date = self.request?.SAfechaInicio
+            {
+                if(self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestPreAccepted)
+                {
+                    cell.lblStartingDateTooltip.text = NSLocalizedString("START_CLASS_PROPOSAL_DATE", comment: "")
+                    cell.lblStartingDate.text = Helpers.formatDateToShow(date:date) + " " + (self.request?.claseHorario)!
+                }
+                else
+                {
+                    cell.lblStartingDateTooltip.text = NSLocalizedString("START_CLASS_DATE", comment: "")
+                    cell.lblStartingDate.text = Helpers.formatDateToShow(date:date)
+                }
+            }
+            
             if let date = self.request?.SAfechaPrueba
             {
                 cell.lblTestDate.text = Helpers.formatDateToShow(date:date)
@@ -300,6 +349,7 @@ extension RequestDetailViewController : UIPickerViewDelegate, UIPickerViewDataSo
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(self.isClassHourPickerSelection)
         {
@@ -322,5 +372,9 @@ extension RequestDetailViewController : UIPickerViewDelegate, UIPickerViewDataSo
         {
             return self.pickerHours[component][row]
         }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        return CGFloat(50.0)
     }
 }

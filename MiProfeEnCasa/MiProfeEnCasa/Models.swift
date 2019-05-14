@@ -433,6 +433,7 @@ class RequestModel : NSObject, Mappable, Meta
     var UMapellido: String?
     var horarios: [ScheduleModel]?
     var claseId: Int?
+    var claseHorario: String?
     
     override init() {}
     
@@ -491,6 +492,7 @@ class RequestModel : NSObject, Mappable, Meta
         UdireccionCalle <- map["UdireccionCalle"]
         horarios <- map["horarios"]
         claseId <- map["claseId"]
+        claseHorario <- map["claseHorario"]
     }
     
     static func queryString() -> String {
@@ -792,6 +794,38 @@ class DeviceTokenAssociationModel : NSObject, Mappable, Meta
     //Impl. of Meta protocol
     static func url() -> String {
         return "usuario/maestro/asociartoken"
+    }
+    
+    static func expand() -> String{
+        return ""
+    }
+}
+
+@objc(RequestDetailModel)
+class RequestDetailModel : NSObject, Mappable, Meta
+{
+    var code: Int?
+    var error_message: String?
+    
+    override init() {}
+    
+    //Impl. of Mappable protocol
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        code <- map["code"]
+        error_message <- map["error_message"]
+    }
+    
+    static func queryString() -> String {
+        return ""
+    }
+    
+    //Impl. of Meta protocol
+    static func url() -> String {
+        return "solicitud/maestro/detalle/" + Helpers.requestId!
     }
     
     static func expand() -> String{

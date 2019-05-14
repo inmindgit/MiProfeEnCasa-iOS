@@ -1,5 +1,5 @@
 //
-//  RequestListTableViewCell.swift
+//  CourseContactTableViewCell.swift
 //  MiProfeEnCasa
 //
 //  Created by Juan Arrillaga on 4/30/19.
@@ -8,16 +8,11 @@
 
 import UIKit
 
-class RequestListTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var lblCourse: UILabel!
-    @IBOutlet weak var lblDescription: UILabel!
+class CourseContactTableViewCell: UITableViewCell {
+    @IBOutlet weak var imgAddress: UIImageView!
     @IBOutlet weak var lblAddress: UILabel!
-    @IBOutlet weak var lblTestDate: UILabel!
-    @IBOutlet weak var lblStartingDate: UILabel!
-    @IBOutlet weak var lblAmountOfClasesPerWeek: UILabel!
-    @IBOutlet weak var imgIcon: UIImageView!
-    @IBOutlet weak var imgSkype: UIImageView!
+    @IBOutlet weak var lblStudentName: UILabel!
+    @IBOutlet weak var lblPhone: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

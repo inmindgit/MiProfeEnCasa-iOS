@@ -73,10 +73,16 @@ class ReportViewController: UIViewController {
     func validateData() -> Bool
     {
         var errorMessage = ""
+        
         if(txtClassNumber.text == "")
         {
             txtClassNumber.becomeFirstResponder()
             errorMessage = NSLocalizedString("NO_CLASS_NUMBER", comment: "")
+        }
+        if(Int(txtClassNumber.text!)! < 1)
+        {
+            txtClassNumber.becomeFirstResponder()
+            errorMessage = NSLocalizedString("CLASS_NUMBER_ERROR", comment: "")
         }
         else if(txtExercicesSubject.text == "")
         {

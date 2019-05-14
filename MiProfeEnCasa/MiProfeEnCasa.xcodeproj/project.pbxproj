@@ -12,6 +12,10 @@
 		4211C132227C8C8A009667C8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4211C130227C8C8A009667C8 /* Models.swift */; };
 		423038262289F207008E855F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423038242289F206008E855F /* Crashlytics.framework */; };
 		423038272289F207008E855F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423038252289F206008E855F /* Fabric.framework */; };
+		4230382A228B175C008E855F /* CourseContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42303828228B175C008E855F /* CourseContactTableViewCell.xib */; };
+		4230382B228B175C008E855F /* CourseContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42303829228B175C008E855F /* CourseContactTableViewCell.swift */; };
+		42303832228B1B98008E855F /* CourseContactDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42303830228B1B98008E855F /* CourseContactDataTableViewCell.swift */; };
+		42303833228B1B98008E855F /* CourseContactDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42303831228B1B98008E855F /* CourseContactDataTableViewCell.xib */; };
 		423B310A2289E15500808018 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 423B310C2289E15500808018 /* Localizable.strings */; };
 		42636C4F22832AD3004C0AFF /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42636C4D22832AD3004C0AFF /* ScheduleTableViewCell.swift */; };
 		42636C5022832AD3004C0AFF /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42636C4E22832AD3004C0AFF /* ScheduleTableViewCell.xib */; };
@@ -51,6 +55,10 @@
 		4211C130227C8C8A009667C8 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		423038242289F206008E855F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		423038252289F206008E855F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		42303828228B175C008E855F /* CourseContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseContactTableViewCell.xib; sourceTree = "<group>"; };
+		42303829228B175C008E855F /* CourseContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseContactTableViewCell.swift; sourceTree = "<group>"; };
+		42303830228B1B98008E855F /* CourseContactDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContactDataTableViewCell.swift; sourceTree = "<group>"; };
+		42303831228B1B98008E855F /* CourseContactDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseContactDataTableViewCell.xib; sourceTree = "<group>"; };
 		423B31062289E0E300808018 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
 		423B31072289E0E300808018 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		423B310B2289E15500808018 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -169,6 +177,10 @@
 				42636C4E22832AD3004C0AFF /* ScheduleTableViewCell.xib */,
 				42636C5422835C77004C0AFF /* TimePeriodTableViewCell.swift */,
 				42636C5522835C77004C0AFF /* TimePeriodTableViewCell.xib */,
+				42303829228B175C008E855F /* CourseContactTableViewCell.swift */,
+				42303828228B175C008E855F /* CourseContactTableViewCell.xib */,
+				42303830228B1B98008E855F /* CourseContactDataTableViewCell.swift */,
+				42303831228B1B98008E855F /* CourseContactDataTableViewCell.xib */,
 			);
 			path = CustomControls;
 			sourceTree = "<group>";
@@ -266,8 +278,10 @@
 				42E464502278A0AD0004CC91 /* Assets.xcassets in Resources */,
 				42E4647B227B6DFF0004CC91 /* MenuTableViewCell.xib in Resources */,
 				426CD54822860E10006C68A2 /* GoogleService-Info.plist in Resources */,
+				4230382A228B175C008E855F /* CourseContactTableViewCell.xib in Resources */,
 				42636C5022832AD3004C0AFF /* ScheduleTableViewCell.xib in Resources */,
 				42E4644E2278A0AB0004CC91 /* Main.storyboard in Resources */,
+				42303833228B1B98008E855F /* CourseContactDataTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +387,7 @@
 				42E4646A2278D4650004CC91 /* ImageTableViewHeader.swift in Sources */,
 				42E4647A227B6DFF0004CC91 /* MenuTableViewCell.swift in Sources */,
 				42E4645D2278BE220004CC91 /* RequestListTableViewCell.swift in Sources */,
+				4230382B228B175C008E855F /* CourseContactTableViewCell.swift in Sources */,
 				42E46482227B8F280004CC91 /* ProfileViewController.swift in Sources */,
 				42E46477227B40680004CC91 /* MenuViewController.swift in Sources */,
 				42636C5322832FF0004C0AFF /* Extensions.swift in Sources */,
@@ -380,6 +395,7 @@
 				42636C4F22832AD3004C0AFF /* ScheduleTableViewCell.swift in Sources */,
 				42E464672278CF6E0004CC91 /* CourseAddressTableViewCell.swift in Sources */,
 				42E464602278BE3D0004CC91 /* RequestListViewController.swift in Sources */,
+				42303832228B1B98008E855F /* CourseContactDataTableViewCell.swift in Sources */,
 				42B3E81222807B87007C02F0 /* Helpers.swift in Sources */,
 				4211C132227C8C8A009667C8 /* Models.swift in Sources */,
 				42E4646E2278D8750004CC91 /* RequestDetailViewController.swift in Sources */,

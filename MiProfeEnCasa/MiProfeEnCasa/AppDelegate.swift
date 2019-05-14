@@ -101,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func changeRootViewControllerToLoginViewController () {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+        let controller = storyboard.instantiateViewController(withIdentifier: "LoginNavigationController")
         if let window = self.window{
             window.rootViewController = controller
         }

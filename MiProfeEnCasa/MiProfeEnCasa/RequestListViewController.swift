@@ -14,7 +14,7 @@ class RequestListViewController: UIViewController, SWRevealViewControllerDelegat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     fileprivate var heightDictionary: [Int : CGFloat] = [:]
-
+    private let refreshControl = UIRefreshControl()
     var requestList: RequestListModel?
     
     override func viewDidLoad() {
@@ -24,6 +24,16 @@ class RequestListViewController: UIViewController, SWRevealViewControllerDelegat
         self.tableView.register(UINib(nibName: "RequestListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        
+        refreshControl.addTarget(self, action: #selector(self.getRequestListByRefresh), for: .valueChanged)
+        
         self.navigationItem.hidesBackButton = true
         self.title = NSLocalizedString("REQUESTS", comment: "")
 
@@ -64,7 +74,13 @@ class RequestListViewController: UIViewController, SWRevealViewControllerDelegat
         }
     }
     
-    func getRequestList()
+    @objc func getRequestListByRefresh()
+    {
+        ApiManager.sharedInstance.showHud = false
+        self.getRequestList()
+    }
+    
+    @objc func getRequestList()
     {
         ApiManager.sharedInstance.execute(type: RequestListModel.self, operation: "get") { (response:AnyObject?) in
             if((response) != nil)
@@ -75,6 +91,8 @@ class RequestListViewController: UIViewController, SWRevealViewControllerDelegat
                 }
                 else if response is RequestListModel {
                     self.requestList = response as? RequestListModel
+                    ApiManager.sharedInstance.showHud = true
+                    self.refreshControl.endRefreshing()
                     self.tableView.reloadData()
                 }
             }
@@ -129,9 +147,17 @@ extension RequestListViewController : UITableViewDelegate, UITableViewDataSource
         cell.lblAddress.text = (self.requestList?.result?[indexPath.row].UdireccionCalle)!
         cell.lblDescription.text = self.requestList?.result?[indexPath.row].Cdescripcion
         
+        
         if let date = self.requestList?.result?[indexPath.row].SAfechaInicio
         {
-            cell.lblStartingDate.text = NSLocalizedString("START_CLASS", comment: "") + Helpers.formatDateToShow(date:date)
+            if(self.requestList?.result?[indexPath.row].estadoSolicitudMaestroId == Constants.RequestStatus.kRequestPreAccepted)
+            {
+                cell.lblStartingDate.text = NSLocalizedString("START_CLASS_PROPOSAL", comment: "") + Helpers.formatDateToShow(date:date) + " " + (self.requestList?.result?[indexPath.row].claseHorario)!
+            }
+            else
+            {
+                cell.lblStartingDate.text = NSLocalizedString("START_CLASS", comment: "") + Helpers.formatDateToShow(date:date)
+            }
         }
         
         if let date = self.requestList?.result?[indexPath.row].SAfechaPrueba
@@ -143,14 +169,35 @@ extension RequestListViewController : UITableViewDelegate, UITableViewDataSource
         
         cell.imgIcon.image = UIImage.init(named: Helpers.getRequestStatusImageName(requestStatus: (self.requestList?.result?[indexPath.row].estadoSolicitudMaestroId)!))
         
+        if(self.requestList?.result?[indexPath.row].SAnoPresencial == 1)
+        {
+            cell.imgSkype.image = UIImage.init(named:"ic_skype")
+        }
+        else
+        {
+            cell.imgSkype.image = nil
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tableView.deselectRow(at: indexPath, animated: true)
-        let  requestDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "RequestDetailViewController") as! RequestDetailViewController
-        requestDetailViewController.request = self.requestList?.result![indexPath.row]
-        self.navigationController?.pushViewController(requestDetailViewController, animated: true)
+        Helpers.requestId = String(self.requestList?.result?[indexPath.row]._id ?? 0)
+        ApiManager.sharedInstance.execute(type: RequestDetailModel.self, operation: "get") { (response:AnyObject?) in
+            if((response) != nil)
+            {
+                if response is NSError
+                {}
+                else if response is RequestDetailModel {
+                    self.tableView.deselectRow(at: indexPath, animated: true)
+                    let  requestDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "RequestDetailViewController") as! RequestDetailViewController
+                    requestDetailViewController.request = self.requestList?.result![indexPath.row]
+                    self.navigationController?.pushViewController(requestDetailViewController, animated: true)
+                }
+            }
+            else
+            {}
+        }
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

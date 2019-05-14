@@ -153,6 +153,7 @@
                 <outlet property="lblPendingRequest" destination="c2T-aZ-VPT" id="ZDJ-KR-b0i"/>
                 <outlet property="lblPendingRequestHeightConstraint" destination="IEX-T4-aDO" id="z3l-g4-o3G"/>
                 <outlet property="lblStartingDate" destination="6Wt-lh-dSN" id="ACr-mM-DE0"/>
+                <outlet property="lblStartingDateTooltip" destination="IvD-09-g2L" id="m71-Fb-TF4"/>
                 <outlet property="lblTestDate" destination="e7t-3b-M2I" id="avL-30-Mye"/>
                 <outlet property="tableView" destination="6Wl-wk-f9g" id="vFd-1z-xLc"/>
                 <outlet property="tableViewHeightConstraint" destination="dO0-9a-pSu" id="xlr-ea-RH5"/>

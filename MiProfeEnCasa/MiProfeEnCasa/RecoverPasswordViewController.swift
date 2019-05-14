@@ -51,8 +51,8 @@ class RecoverPasswordViewController: UIViewController {
                             self.txtEmail.resignFirstResponder()
                             self.present(alert, animated: true)
                             
-                            //let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                            //appDelegate.changeRootViewControllerToLoginViewController()
+                            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                            appDelegate.changeRootViewControllerToLoginViewController()
                         }
                         else
                         {
