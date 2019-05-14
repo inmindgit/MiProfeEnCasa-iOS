@@ -449,7 +449,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="btnNewPasswordTap:" destination="deF-r8-OSV" eventType="touchUpInside" id="wVb-cV-1hW"/>
-                                                    <segue destination="CFa-ii-Nro" kind="show" id="Hay-bR-yJi"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Eb-8N-7VD">
@@ -609,7 +608,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSa-6j-m7e" customClass="TPKeyboardAvoidingScrollView" customModule="TPKeyboardAvoidingSwift">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5W9-Zd-aXv">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>

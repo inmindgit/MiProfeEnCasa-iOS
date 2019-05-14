@@ -14,12 +14,12 @@ class RecoverPasswordViewController: UIViewController {
     @IBOutlet weak var txtEmail: GBTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
         self.title = NSLocalizedString("RESET_PASSWORD", comment: "")
     }        
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.isHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,10 +48,11 @@ class RecoverPasswordViewController: UIViewController {
                         {
                             let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: "") , message:NSLocalizedString("REQUEST_SUCCESSFULLY", comment: "") , preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
+                            self.txtEmail.resignFirstResponder()
                             self.present(alert, animated: true)
-                        
-                            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                            appDelegate.changeRootViewControllerToLoginViewController()
+                            
+                            //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                            //appDelegate.changeRootViewControllerToLoginViewController()
                         }
                         else
                         {
