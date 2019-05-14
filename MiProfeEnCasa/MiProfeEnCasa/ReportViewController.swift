@@ -73,27 +73,34 @@ class ReportViewController: UIViewController {
     func validateData() -> Bool
     {
         var errorMessage = ""
+        var txtTemporal: UITextField?
+        
+        txtClassNumber.resignFirstResponder()
+        txtExercicesSubject.resignFirstResponder()
+        txtObservations.resignFirstResponder()
+        txtClarification.resignFirstResponder()
+        txtHomeworksForNextClass.resignFirstResponder()
         
         if(txtClassNumber.text == "")
         {
-            txtClassNumber.becomeFirstResponder()
             errorMessage = NSLocalizedString("NO_CLASS_NUMBER", comment: "")
+            txtTemporal = self.txtClassNumber
         }
-        if(Int(txtClassNumber.text!)! < 1)
+        else if(Int(txtClassNumber.text!)! < 1)
         {
-            txtClassNumber.becomeFirstResponder()
             errorMessage = NSLocalizedString("CLASS_NUMBER_ERROR", comment: "")
+            txtTemporal = self.txtClassNumber
         }
         else if(txtExercicesSubject.text == "")
         {
-            txtExercicesSubject.becomeFirstResponder()
             errorMessage = NSLocalizedString("NO_EXERCICES", comment: "")
+            txtTemporal = self.txtExercicesSubject
         }
 
         else if(txtObservations.text == "")
         {
-            txtObservations.becomeFirstResponder()
             errorMessage = NSLocalizedString("NO_OBSERVATIONS", comment: "")
+            txtTemporal = self.txtObservations
         }
         
         if(errorMessage == "")
@@ -103,8 +110,11 @@ class ReportViewController: UIViewController {
         else
         {
             let alert = UIAlertController(title: NSLocalizedString("APP_NAME", comment: ""), message:errorMessage, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .default, handler: nil))
-            self.present(alert, animated: true)
+            let acceptAction: UIAlertAction = UIAlertAction(title: NSLocalizedString("ACCEPT", comment: ""), style: .cancel) { action -> Void in
+                 txtTemporal?.becomeFirstResponder()
+            }
+            alert.addAction(acceptAction)
+            self.present(alert, animated: true, completion: nil)
             return false
         }
     }
