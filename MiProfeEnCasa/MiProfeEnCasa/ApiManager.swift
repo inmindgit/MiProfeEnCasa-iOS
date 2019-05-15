@@ -234,7 +234,7 @@ class ApiManager
     
     func put <T> (type: T.Type, headers:[String:String], onCompletion: @escaping ServiceResponse)->Void where T:Mappable, T:Meta {
         
-        var url = self.url + type.url()
+        let url = self.url + type.url()
         
         let parameters = self.parameters
         let postManager = Alamofire.request(url, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers)

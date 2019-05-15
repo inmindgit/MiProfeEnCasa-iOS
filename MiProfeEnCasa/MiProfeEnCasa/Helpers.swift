@@ -122,7 +122,6 @@ class Helpers{
     
     static func validateClassTime(startingDate: String) -> Bool
     {
-        var formattedDate = String()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         

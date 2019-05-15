@@ -373,7 +373,7 @@ class RequestListModel : NSObject, Mappable, Meta
     
     //Impl. of Meta protocol
     static func url() -> String {
-        return "solicitud/maestro/listar/13/0"
+        return "solicitud/maestro/listar/" + String(Helpers.getLoggedUser()._id ?? 0) + "/0"
     }
     
     static func expand() -> String{
