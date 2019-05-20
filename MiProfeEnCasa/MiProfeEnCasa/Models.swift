@@ -434,6 +434,7 @@ class RequestModel : NSObject, Mappable, Meta
     var horarios: [ScheduleModel]?
     var claseId: Int?
     var claseHorario: String?
+    var claseFecha: String?
     
     override init() {}
     
@@ -493,6 +494,7 @@ class RequestModel : NSObject, Mappable, Meta
         horarios <- map["horarios"]
         claseId <- map["claseId"]
         claseHorario <- map["claseHorario"]
+        claseFecha <- map["claseFecha"]
     }
     
     static func queryString() -> String {

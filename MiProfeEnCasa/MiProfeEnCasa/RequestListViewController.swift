@@ -150,9 +150,18 @@ extension RequestListViewController : UITableViewDelegate, UITableViewDataSource
         
         if let date = self.requestList?.result?[indexPath.row].SAfechaInicio
         {
-            if(self.requestList?.result?[indexPath.row].estadoSolicitudMaestroId == Constants.RequestStatus.kRequestPreAccepted)
+            if(self.requestList?.result?[indexPath.row].estadoSolicitudMaestroId == Constants.RequestStatus.kRequestPreAccepted || self.requestList?.result?[indexPath.row].estadoSolicitudMaestroId == Constants.RequestStatus.kRequestAccepted)
             {
-                cell.lblStartingDate.text = NSLocalizedString("START_CLASS_PROPOSAL", comment: "") + Helpers.formatDateToShow(date:date) + " " + (self.requestList?.result?[indexPath.row].claseHorario)!
+                if(self.requestList?.result?[indexPath.row].estadoSolicitudMaestroId == Constants.RequestStatus.kRequestPreAccepted)
+                {
+                    cell.lblStartingDate.text = NSLocalizedString("START_CLASS_PROPOSAL", comment: "")
+                }
+                else
+                {
+                    cell.lblStartingDate.text = NSLocalizedString("START_CLASS", comment: "")
+                }
+                
+                cell.lblStartingDate.text = cell.lblStartingDate.text! + Helpers.formatDateToShow(date:(self.requestList?.result?[indexPath.row].claseFecha)!) + " " + (self.requestList?.result?[indexPath.row].claseHorario)!
             }
             else
             {

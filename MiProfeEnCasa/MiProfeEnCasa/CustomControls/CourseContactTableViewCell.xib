@@ -27,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acc-Ap-TVi">
-                        <rect key="frame" x="45" y="10" width="0.0" height="21"/>
+                        <rect key="frame" x="50" y="10" width="0.0" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="c6i-MK-o6p"/>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="41" id="rY6-lA-hND"/>
@@ -95,7 +95,7 @@
                     <constraint firstAttribute="trailing" secondItem="7Gv-sL-DYE" secondAttribute="trailing" constant="10" id="VX2-or-BkI"/>
                     <constraint firstItem="HUv-fW-jrI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="ZlY-hz-0c3"/>
                     <constraint firstItem="yaB-8t-bqo" firstAttribute="leading" secondItem="khn-b7-caP" secondAttribute="trailing" constant="15" id="b6D-Up-0kU"/>
-                    <constraint firstItem="acc-Ap-TVi" firstAttribute="leading" secondItem="khn-b7-caP" secondAttribute="trailing" constant="10" id="fYg-a8-dqS"/>
+                    <constraint firstItem="acc-Ap-TVi" firstAttribute="leading" secondItem="khn-b7-caP" secondAttribute="trailing" constant="15" id="fYg-a8-dqS"/>
                     <constraint firstItem="HUv-fW-jrI" firstAttribute="top" secondItem="yaB-8t-bqo" secondAttribute="bottom" constant="10" id="gTV-JV-1g3"/>
                     <constraint firstAttribute="trailing" secondItem="yaB-8t-bqo" secondAttribute="trailing" constant="10" id="gxf-s9-kE8"/>
                     <constraint firstItem="dYc-oc-HnQ" firstAttribute="top" secondItem="9Am-15-lLb" secondAttribute="bottom" id="mkd-QN-3kX"/>

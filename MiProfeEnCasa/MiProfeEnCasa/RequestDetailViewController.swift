@@ -19,6 +19,7 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
     var isClassHourPickerSelection : Bool = false
     var selectedRow : Int = 0
     var classesOfDay: [ScheduleModel]?
+    var selectedDayIndex : Int = 0
     
     @IBOutlet weak var txtPickerDispaly: UITextField!
     
@@ -160,7 +161,8 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
         let fecha = self.request?.SAfechaInicio
         let horaComienzo = dateAndHour
         
-        let primeraClase =  ["fecha":fecha, "horaComienzo":horaComienzo]
+        let nextClassDate = Helpers.addRemoveDaysForDate(dateStr: fecha!, days: self.selectedDayIndex + 2)
+        let primeraClase =  ["fecha":nextClassDate, "horaComienzo":horaComienzo]
         
         if let theJSONData = try? JSONSerialization.data(withJSONObject: primeraClase,options: []) {
             let theJSONText = String(data: theJSONData,
@@ -230,9 +232,10 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
         }
     }
     
-    func selectClassHours(classesOfDay: [ScheduleModel], index: Int)
+    func selectClassHours(classesOfDay: [ScheduleModel], day: Int, index: Int)
     {
         self.isClassHourPickerSelection = true
+        self.selectedDayIndex = day
         self.calculateHoursInterval(classesOfDay: classesOfDay, rowIndex: index)
         self.txtPickerDispaly.becomeFirstResponder()
     }
@@ -279,28 +282,51 @@ extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSour
         }
         else if(indexPath.row == 1)
         {
-            if(self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestNotReaded || self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestReaded || self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestReaded )
+            if(self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestNotReaded || self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestReaded || self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestPreAccepted )
             {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cellAddress", for: indexPath) as! CourseAddressTableViewCell
-                if(self.request?.UdireccionCalle != nil && self.request?.UdireccionEsquina != nil)
+                
+                if(self.request?.SAnoPresencial == 1)
                 {
-                    cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                    cell.lblAddress.text = "Skype"
+                    cell.lblAddressTooltip.text = NSLocalizedString("CONTACT", comment: "")
                 }
+                else
+                {
+                    if(self.request?.UdireccionCalle != nil && self.request?.UdireccionEsquina != nil)
+                    {
+                        cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                    }
+                    cell.lblAddressTooltip.text = NSLocalizedString("ZONE", comment: "")
+                }
+                
+                
+                
                 return cell
             }
             else
             {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "cellContact", for: indexPath) as! CourseContactDataTableViewCell
-                
-                if(self.request?.UdireccionCalle != nil && self.request?.UdireccionEsquina != nil)
+                if(self.request?.SAnoPresencial == 1)
                 {
-                    cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "cellAddress", for: indexPath) as! CourseAddressTableViewCell
+                    cell.lblAddress.text = self.request?.UskypeId
+                    cell.lblAddressTooltip.text = NSLocalizedString("CONTACT", comment: "")
+                    return cell
                 }
-                
-                cell.lblStudentName.text = (self.request?.Unombre)! + " " + (self.request?.Uapellido)!
-                cell.lblPhone.text = self.request?.Ucelular!
-                
-                return cell
+                else
+                {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "cellContact", for: indexPath) as! CourseContactDataTableViewCell
+                    
+                    if(self.request?.UdireccionCalle != nil && self.request?.UdireccionEsquina != nil)
+                    {
+                        cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                    }
+                    
+                    cell.lblStudentName.text = (self.request?.Unombre)! + " " + (self.request?.Uapellido)!
+                    cell.lblPhone.text = self.request?.Ucelular!
+                    
+                    return cell
+                }
             }
         }
         else
@@ -314,18 +340,18 @@ extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSour
             {
                 cell.sortAvailableTimesPerDay(request: self.request)
             }
-        
-            if let date = self.request?.SAfechaInicio
-            {
-                cell.lblStartingDate.text = Helpers.formatDateToShow(date:date)
-            }
             
             if let date = self.request?.SAfechaInicio
             {
                 if(self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestPreAccepted)
                 {
                     cell.lblStartingDateTooltip.text = NSLocalizedString("START_CLASS_PROPOSAL_DATE", comment: "")
-                    cell.lblStartingDate.text = Helpers.formatDateToShow(date:date) + " " + (self.request?.claseHorario)!
+                    cell.lblStartingDate.text = Helpers.formatDateToShow(date:(self.request?.claseFecha)!)  + " " + (self.request?.claseHorario)!
+                }
+                else if(self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestAccepted)
+                {
+                    cell.lblStartingDateTooltip.text = NSLocalizedString("START_CLASS_DATE", comment: "")
+                    cell.lblStartingDate.text = Helpers.formatDateToShow(date:(self.request?.claseFecha)!) + " " + (self.request?.claseHorario)!
                 }
                 else
                 {
@@ -341,7 +367,6 @@ extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSour
             
             return cell
         }
-        
     }
 }
 

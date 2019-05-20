@@ -139,25 +139,60 @@ class Helpers{
         }
     }
     
-    /*
-     public static boolean validaDisponibilidadCargaHoras(String fechaInicio){
-     String fechaFormateada = "";
-     try {
-     SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-     Date fechaClase = dt.parse(fechaInicio);
-     Date fechaHoy=new Date();
-     return fechaClase.compareTo(fechaHoy)<=0;
-     } catch (Exception e) {
-     return false;
-     }
-     }
-    */
-    
     static func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
     }
+    
+    
+    static func addRemoveDaysForDate(dateStr: String, days: Int) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        var date = Date()
+        
+        if(dateStr != "")
+        {
+            date = dateFormatter.date(from:dateStr)!
+        }
+        
+        var nextClassDate = date
+        nextClassDate = self.nextDayOfWeekFromDate(dow: days, startDate: nextClassDate)
+        
+        var dateToReturn = Date()
+        
+        if(Calendar.current.isDate(nextClassDate, inSameDayAs:Date()))
+        {
+            dateToReturn = Calendar.current.date(byAdding: .weekOfYear, value: 1, to: nextClassDate)!
+        }
+        else
+        {
+            dateToReturn = nextClassDate
+        }
+        
+        return dateFormatter.string(from:dateToReturn)
+    }
+    
+    
+    static func nextDayOfWeekFromDate(dow: Int, startDate: Date) -> Date
+    {
+        var futureDate = startDate
+        var dateComponent = DateComponents()
+        dateComponent.day = 1
+        while(self.getDayOfWeek(today: futureDate) != dow)
+        {
+            futureDate = Calendar.current.date(byAdding: dateComponent, to: futureDate)!
+        }
+        
+        return futureDate
+    }
+    
+    static func getDayOfWeek(today:Date) -> Int? {
+        let myCalendar = Calendar(identifier: .gregorian)
+        let weekDay = myCalendar.component(.weekday, from: today)
+        return weekDay
+    }
+    
 }
-

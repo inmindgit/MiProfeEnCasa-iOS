@@ -33,6 +33,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "RequestListViewController.tableView(_:cellForRowAt:):RequestListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.requestList?.result?[indexPath.row]">
+            </PersistentString>
+            <PersistentString
+               value = "self.requestList?.result?[indexPath.row].SAfechaInicio">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "RequestDetailViewController.setAmountOfHours():RequestDetailViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -45,6 +56,9 @@
          <PersistentStrings>
             <PersistentString
                value = "ApiManager.sharedInstance.queryParameters">
+            </PersistentString>
+            <PersistentString
+               value = "self.selectedDayIndex">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -63,6 +77,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "RequestDetailViewController.calculateHoursInterval():RequestDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.hoursOfClases">
+            </PersistentString>
+            <PersistentString
+               value = "startTime">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #2 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
          <PersistentStrings>
             <PersistentString
@@ -71,13 +96,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "RequestDetailViewController.calculateHoursInterval():RequestDetailViewController.swift">
+         contextName = "ScheduleTableViewCell.tableView(_:cellForRowAt:):ScheduleTableViewCell.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.hoursOfClases">
-            </PersistentString>
-            <PersistentString
-               value = "startTime">
+               value = "indexPath.row">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -182,10 +204,10 @@
          contextName = "ProfileViewController.btnOkTap(_:):ProfileViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "theJSONText">
+               value = "user">
             </PersistentString>
             <PersistentString
-               value = "ApiManager.sharedInstance.queryParameters">
+               value = "(user?.direccionApto! ?? &quot;&quot;)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -208,6 +230,22 @@
             </PersistentString>
             <PersistentString
                value = "txtClassNumber.text == &quot;&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Helpers.nextDayOfWeekFromDate(dow:startDate:):Helpers.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.getDayOfWeek(today: futureDate)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ScheduleTableViewCell.setupSegmentioView():ScheduleTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedSegmentioIndex">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -55,7 +55,7 @@ class ProfileViewController: UIViewController, SWRevealViewControllerDelegate {
 
     @IBAction func btnOkTap(_ sender: Any) {
         var errorMessage = ""
-        
+
         if(txtMobilePhone.text == "")
         {
             txtMobilePhone.becomeFirstResponder()
@@ -68,15 +68,15 @@ class ProfileViewController: UIViewController, SWRevealViewControllerDelegate {
         }
         else
         {
-            let apellido = user!.apellido!
-            let direccionApto = user?.direccionApto! ?? ""
-            let direccionCalle = user?.direccionCalle! ?? ""
-            let direccionDepartamentoId = user?.direccionDepartamentoId! ?? 0
-            let direccionEsquina = user?.direccionEsquina! ?? ""
-            let direccionNumero = user?.direccionNumero! ?? ""
-            let franquiciaId = user?.franquiciaId! ?? 0
-            let nombre = user?.nombre! ?? ""
-            let telefono = user?.telefono! ?? ""
+            let apellido = (user!.apellido ?? "")
+            let direccionApto = (user?.direccionApto ?? "")
+            let direccionCalle = (user?.direccionCalle! ?? "")
+            let direccionDepartamentoId = (user?.direccionDepartamentoId ?? 0)
+            let direccionEsquina = (user?.direccionEsquina ?? "")
+            let direccionNumero = (user?.direccionNumero ?? "")
+            let franquiciaId = (user?.franquiciaId ?? 0)
+            let nombre = (user?.nombre ?? "")
+            let telefono = (user?.telefono ?? "")
             
             let userData =  ["apellido":apellido,
                              "celular":self.txtMobilePhone.text!,

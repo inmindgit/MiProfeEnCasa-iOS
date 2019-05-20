@@ -22,7 +22,7 @@ private struct Days
 
 protocol ScheduleTableViewCellDelegate {
     func loadTimeOrAddReport()
-    func selectClassHours(classesOfDay : [ScheduleModel], index : Int)
+    func selectClassHours(classesOfDay : [ScheduleModel], day: Int, index : Int)
 }
 
 class ScheduleTableViewCell: UITableViewCell, TimePeriodTableViewCellDelegate {
@@ -51,6 +51,7 @@ class ScheduleTableViewCell: UITableViewCell, TimePeriodTableViewCellDelegate {
     var request: RequestModel?
     
     var delegate: ScheduleTableViewCellDelegate?
+    var selectedDayIndex : Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -74,6 +75,7 @@ class ScheduleTableViewCell: UITableViewCell, TimePeriodTableViewCellDelegate {
         
         daysSegmentedController.selectedSegmentioIndex = selectedSegmentioIndex()
         daysSegmentedController.valueDidChange = { [weak self] _, segmentIndex in
+            self!.selectedDayIndex = self!.daysSegmentedController.selectedSegmentioIndex
             self?.tableView.reloadData()
         }
     }
@@ -83,7 +85,7 @@ class ScheduleTableViewCell: UITableViewCell, TimePeriodTableViewCellDelegate {
     }
     
     func setClassHour(index: Int) {
-        self.delegate?.selectClassHours(classesOfDay:self.displayedAvailableTimes, index: index)
+        self.delegate?.selectClassHours(classesOfDay:self.displayedAvailableTimes,day: self.selectedDayIndex,index: index)
     }
     
     func hideControls(requestStatus: Int)

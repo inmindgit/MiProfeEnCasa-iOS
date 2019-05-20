@@ -11,6 +11,7 @@ import UIKit
 class CourseAddressTableViewCell: UITableViewCell {
     @IBOutlet weak var imgAddress: UIImageView!
     @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblAddressTooltip: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

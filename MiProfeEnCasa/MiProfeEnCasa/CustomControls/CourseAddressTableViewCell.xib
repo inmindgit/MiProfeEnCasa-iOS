@@ -27,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acc-Ap-TVi">
-                        <rect key="frame" x="45" y="10" width="0.0" height="21"/>
+                        <rect key="frame" x="50" y="10" width="0.0" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="c6i-MK-o6p"/>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="41" id="rY6-lA-hND"/>
@@ -48,7 +48,7 @@
                     <constraint firstAttribute="bottom" secondItem="yaB-8t-bqo" secondAttribute="bottom" constant="9.5" id="JhI-m3-OWL"/>
                     <constraint firstItem="khn-b7-caP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="RUD-UD-sc6"/>
                     <constraint firstItem="yaB-8t-bqo" firstAttribute="leading" secondItem="khn-b7-caP" secondAttribute="trailing" constant="15" id="b6D-Up-0kU"/>
-                    <constraint firstItem="acc-Ap-TVi" firstAttribute="leading" secondItem="khn-b7-caP" secondAttribute="trailing" constant="10" id="fYg-a8-dqS"/>
+                    <constraint firstItem="acc-Ap-TVi" firstAttribute="leading" secondItem="khn-b7-caP" secondAttribute="trailing" constant="15" id="fYg-a8-dqS"/>
                     <constraint firstAttribute="trailing" secondItem="yaB-8t-bqo" secondAttribute="trailing" constant="10" id="gxf-s9-kE8"/>
                     <constraint firstItem="yaB-8t-bqo" firstAttribute="top" secondItem="acc-Ap-TVi" secondAttribute="bottom" id="sQp-Si-RcY"/>
                     <constraint firstItem="acc-Ap-TVi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wMc-Hh-5X8"/>
@@ -58,6 +58,7 @@
             <connections>
                 <outlet property="imgAddress" destination="khn-b7-caP" id="j11-oC-rdQ"/>
                 <outlet property="lblAddress" destination="acc-Ap-TVi" id="HKd-LW-21Y"/>
+                <outlet property="lblAddressTooltip" destination="yaB-8t-bqo" id="cqM-bs-iI8"/>
             </connections>
             <point key="canvasLocation" x="56" y="47.676161919040482"/>
         </tableViewCell>

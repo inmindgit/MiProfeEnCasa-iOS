@@ -12,9 +12,9 @@
 "APP_NAME" = "Mi Profe en Casa";
 "ACCEPT" = "Aceptar";
 
-"START_CLASS_PROPOSAL" = "Incio propuesto: ";
-"START_CLASS" = "Incio curso: ";
-"START_CLASS_PROPOSAL_DATE" = "Fecha de Inicio propuesto";
+"START_CLASS_PROPOSAL" = "Inicio propuesto: ";
+"START_CLASS" = "Inicio curso: ";
+"START_CLASS_PROPOSAL_DATE" = "Fecha de Inicio propuesta";
 "START_CLASS_DATE" = "Fecha de Inicio";
 
 "CLASSES_PER_WEEK" = "Veces por semana: ";
@@ -68,5 +68,8 @@
 
 
 "LOAD_TIME_UNAVAILABLE" = "Aún no está disponible la carga de horas. Espere a realizar la clase.";
+
+"ZONE" = "Zona";
+"CONTACT" = "Contacto";
 
 

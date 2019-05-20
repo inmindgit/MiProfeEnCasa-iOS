@@ -27,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7t-3b-M2I">
-                        <rect key="frame" x="45" y="10" width="273" height="21"/>
+                        <rect key="frame" x="50" y="10" width="268" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Cz7-CM-i72"/>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="41" id="Dlf-es-QiY"/>
@@ -129,7 +129,7 @@
                     <constraint firstItem="e7t-3b-M2I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ZpH-Jh-c0u"/>
                     <constraint firstItem="IvD-09-g2L" firstAttribute="top" secondItem="6Wt-lh-dSN" secondAttribute="bottom" id="aXO-yS-CGU"/>
                     <constraint firstAttribute="trailing" secondItem="Z2d-LV-UZt" secondAttribute="trailing" constant="10" id="ao3-j8-qVW"/>
-                    <constraint firstItem="e7t-3b-M2I" firstAttribute="leading" secondItem="GbL-Wg-ULh" secondAttribute="trailing" constant="10" id="cJL-CO-O1g"/>
+                    <constraint firstItem="e7t-3b-M2I" firstAttribute="leading" secondItem="GbL-Wg-ULh" secondAttribute="trailing" constant="15" id="cJL-CO-O1g"/>
                     <constraint firstAttribute="trailing" secondItem="6Wl-wk-f9g" secondAttribute="trailing" id="d0a-oR-g8h"/>
                     <constraint firstItem="GbL-Wg-ULh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="fN3-yG-ZLE"/>
                     <constraint firstItem="c2T-aZ-VPT" firstAttribute="leading" secondItem="mBv-vd-lJ2" secondAttribute="trailing" constant="6" id="gXX-Xf-bIg"/>
