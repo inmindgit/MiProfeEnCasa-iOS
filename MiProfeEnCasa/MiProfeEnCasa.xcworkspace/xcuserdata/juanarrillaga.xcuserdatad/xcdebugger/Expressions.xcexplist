@@ -77,13 +77,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "RequestDetailViewController.calculateHoursInterval():RequestDetailViewController.swift">
+         contextName = "ScheduleTableViewCell.tableView(_:cellForRowAt:):ScheduleTableViewCell.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.hoursOfClases">
-            </PersistentString>
-            <PersistentString
-               value = "startTime">
+               value = "indexPath.row">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -96,10 +93,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ScheduleTableViewCell.tableView(_:cellForRowAt:):ScheduleTableViewCell.swift">
+         contextName = "RequestDetailViewController.calculateHoursInterval():RequestDetailViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "indexPath.row">
+               value = "self.hoursOfClases">
+            </PersistentString>
+            <PersistentString
+               value = "startTime">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -254,6 +254,17 @@
          <PersistentStrings>
             <PersistentString
                value = "self.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Helpers.addRemoveDaysForDate(dateStr:days:):Helpers.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Date()">
+            </PersistentString>
+            <PersistentString
+               value = "Date">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

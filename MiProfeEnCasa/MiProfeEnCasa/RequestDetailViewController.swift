@@ -295,13 +295,23 @@ extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSour
                 {
                     if(self.request?.UdireccionCalle != nil && self.request?.UdireccionEsquina != nil)
                     {
-                        cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                        if let addressNumber = self.request?.UdireccionNumero
+                        {
+                            cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)! + " " + addressNumber
+                            
+                            if let addressApto = self.request?.UdireccionApto
+                            {
+                                cell.lblAddress.text = cell.lblAddress.text! + " " + addressApto
+                            }
+                        }
+                        else
+                        {
+                            cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                        }
                     }
                     cell.lblAddressTooltip.text = NSLocalizedString("ZONE", comment: "")
                 }
-                
-                
-                
+ 
                 return cell
             }
             else

@@ -10,8 +10,6 @@
 		007F96771BB8C57CD79D921B /* Pods_MiProfeEnCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F4C7DE37CA6B706D73E20F /* Pods_MiProfeEnCasa.framework */; };
 		4211C131227C8C8A009667C8 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4211C12F227C8C8A009667C8 /* ApiManager.swift */; };
 		4211C132227C8C8A009667C8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4211C130227C8C8A009667C8 /* Models.swift */; };
-		423038262289F207008E855F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423038242289F206008E855F /* Crashlytics.framework */; };
-		423038272289F207008E855F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423038252289F206008E855F /* Fabric.framework */; };
 		4230382A228B175C008E855F /* CourseContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42303828228B175C008E855F /* CourseContactTableViewCell.xib */; };
 		4230382B228B175C008E855F /* CourseContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42303829228B175C008E855F /* CourseContactTableViewCell.swift */; };
 		42303832228B1B98008E855F /* CourseContactDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42303830228B1B98008E855F /* CourseContactDataTableViewCell.swift */; };
@@ -25,6 +23,8 @@
 		426CD54822860E10006C68A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 426CD54722860E10006C68A2 /* GoogleService-Info.plist */; };
 		42B3E80F227CB6A2007C02F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B3E80E227CB6A2007C02F0 /* Constants.swift */; };
 		42B3E81222807B87007C02F0 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B3E81122807B87007C02F0 /* Helpers.swift */; };
+		42CB554422B835C4004CFED8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CB554222B835C3004CFED8 /* Crashlytics.framework */; };
+		42CB554522B835C4004CFED8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CB554322B835C4004CFED8 /* Fabric.framework */; };
 		42E464492278A0AB0004CC91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E464482278A0AB0004CC91 /* AppDelegate.swift */; };
 		42E4644E2278A0AB0004CC91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E4644C2278A0AB0004CC91 /* Main.storyboard */; };
 		42E464502278A0AD0004CC91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E4644F2278A0AD0004CC91 /* Assets.xcassets */; };
@@ -53,8 +53,6 @@
 		3A67990208BE6D138548FC8F /* Pods-MiProfeEnCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiProfeEnCasa.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiProfeEnCasa/Pods-MiProfeEnCasa.release.xcconfig"; sourceTree = "<group>"; };
 		4211C12F227C8C8A009667C8 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		4211C130227C8C8A009667C8 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		423038242289F206008E855F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
-		423038252289F206008E855F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		42303828228B175C008E855F /* CourseContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseContactTableViewCell.xib; sourceTree = "<group>"; };
 		42303829228B175C008E855F /* CourseContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseContactTableViewCell.swift; sourceTree = "<group>"; };
 		42303830228B1B98008E855F /* CourseContactDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContactDataTableViewCell.swift; sourceTree = "<group>"; };
@@ -72,6 +70,8 @@
 		426CD54722860E10006C68A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42B3E80E227CB6A2007C02F0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42B3E81122807B87007C02F0 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		42CB554222B835C3004CFED8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		42CB554322B835C4004CFED8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		42E464452278A0AB0004CC91 /* MiProfeEnCasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiProfeEnCasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E464482278A0AB0004CC91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E4644D2278A0AB0004CC91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,9 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423038262289F207008E855F /* Crashlytics.framework in Frameworks */,
+				42CB554422B835C4004CFED8 /* Crashlytics.framework in Frameworks */,
 				007F96771BB8C57CD79D921B /* Pods_MiProfeEnCasa.framework in Frameworks */,
-				423038272289F207008E855F /* Fabric.framework in Frameworks */,
+				42CB554522B835C4004CFED8 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,8 +150,6 @@
 				42E4644C2278A0AB0004CC91 /* Main.storyboard */,
 				42E4645A2278BDEF0004CC91 /* CustomControls */,
 				42E4644F2278A0AD0004CC91 /* Assets.xcassets */,
-				423038242289F206008E855F /* Crashlytics.framework */,
-				423038252289F206008E855F /* Fabric.framework */,
 				42E464512278A0AD0004CC91 /* LaunchScreen.storyboard */,
 				423B310C2289E15500808018 /* Localizable.strings */,
 				42E464542278A0AD0004CC91 /* Info.plist */,
@@ -197,6 +195,8 @@
 		CDB9CD9F34C3D3B0E76A92A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42CB554222B835C3004CFED8 /* Crashlytics.framework */,
+				42CB554322B835C4004CFED8 /* Fabric.framework */,
 				02F4C7DE37CA6B706D73E20F /* Pods_MiProfeEnCasa.framework */,
 			);
 			name = Frameworks;
@@ -252,6 +252,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = 42E4643C2278A0AB0004CC91;
 			productRefGroup = 42E464462278A0AB0004CC91 /* Products */;
@@ -338,7 +339,7 @@
 		};
 		423B310F2289F06200808018 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -349,7 +350,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run fa54433c572532263a2736e8ff864a2d6674af2e 061209bb1f23a5e36bdebab363633ee5eb4c686c7f75363c91d1f6cb4b9ed3a0\n";
 		};
@@ -475,7 +476,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -604,7 +605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inmind.MiProfeEnCasa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "MiProfeEnCasa AppStore Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "MPEC AdHoc Provisioning Profile";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

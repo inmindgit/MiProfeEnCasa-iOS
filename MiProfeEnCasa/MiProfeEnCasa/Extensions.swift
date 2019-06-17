@@ -54,6 +54,27 @@ extension String {
         let idx2 = index(startIndex, offsetBy: min(self.count, range.upperBound))
         return String(self[idx1..<idx2])
     }
+}
+
+extension Date {
     
+    func isEqualTo(_ date: Date) -> Bool {
+        return self == date
+    }
     
-}  
+    func isGreaterThan(_ date: Date) -> Bool {
+        return self > date
+    }
+    
+    func isSmallerThan(_ date: Date) -> Bool {
+        return self < date
+    }
+    
+    func isSmallerOrEqualsThan(_ date: Date) -> Bool {
+        return self <= date
+    }
+    
+    func isGreaterOrEqualsThan(_ date: Date) -> Bool {
+        return self >= date
+    }
+}

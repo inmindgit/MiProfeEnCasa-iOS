@@ -91,7 +91,7 @@ class Helpers{
         components.setValue(selectedMinutes + 30, for: .minute)
         let selectedDate = Calendar.current.date(byAdding: components, to: date)
         
-        if(endMaximumDate?.compare(selectedDate!)  == .orderedDescending)
+        if((endMaximumDate?.isGreaterOrEqualsThan(selectedDate!))!)
         {
             if(selectedHour == startHour && selectedMinutes == 0 && startMinutes == 30)
             {
@@ -163,7 +163,7 @@ class Helpers{
         
         var dateToReturn = Date()
         
-        if(Calendar.current.isDate(nextClassDate, inSameDayAs:Date()))
+        if(nextClassDate.isGreaterOrEqualsThan(Date()))
         {
             dateToReturn = Calendar.current.date(byAdding: .weekOfYear, value: 1, to: nextClassDate)!
         }
