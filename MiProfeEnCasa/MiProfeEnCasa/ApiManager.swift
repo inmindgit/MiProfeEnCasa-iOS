@@ -137,6 +137,7 @@ class ApiManager
     
     func get <T> (type: T.Type, headers:[String:String], onCompletion: @escaping ServiceResponse) where T:Mappable, T:Meta {
         
+
         var url = self.url + type.url()
         
         if(type.queryString() != "")
@@ -166,6 +167,19 @@ class ApiManager
         }
         else
         {
+            getManager.responseJSON { response in
+                switch (response.result) {
+                case .success:
+                    // completion(nil)
+                    break
+                case .failure(let error):
+                    
+                    // completion(nil)
+                    break
+                }
+            }
+            
+            /*
             getManager.responseObject { (response: DataResponse<T>) in
             {
                 switch response.result {
@@ -176,7 +190,7 @@ class ApiManager
                 }
             }()
             }
-    
+        */
         }
     }
     

@@ -19,7 +19,7 @@ struct Constants {
  
     struct Backend
     {
-        static let kUrl = "http://52.91.210.242/API/servicios.php/"
+        static let kUrl = "https://dev.limit.cool/ws/"
         static let kPort = ""
         static let kEmail = ""
         static let kStoreUrl = ""

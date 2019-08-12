@@ -19,6 +19,21 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        ApiManager.sharedInstance.execute(type: LoginModel.self, operation: "get") { (response:AnyObject?) in
+            if((response) != nil)
+            {
+                if response is NSError
+                {}
+                else if response is LoginModel
+                {
+                   
+                    
+                }
+            }
+            else
+            {}
+        }
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
