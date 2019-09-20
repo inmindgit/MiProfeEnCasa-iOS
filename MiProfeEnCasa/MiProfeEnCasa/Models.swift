@@ -41,7 +41,7 @@ class LoginModel : NSObject, Mappable, Meta, NSCoding
     
     //Impl. of Meta protocol
     static func url() -> String {
-        return "get_params"
+        return "usuario/login"
     }
     
     static func expand() -> String{

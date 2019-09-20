@@ -85,6 +85,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #2 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "RequestDetailViewController.calculateHoursInterval():RequestDetailViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -92,14 +100,6 @@
             </PersistentString>
             <PersistentString
                value = "startTime">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #2 in ApiManager.get&lt;A&gt;(type:headers:onCompletion:):ApiManager.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "response.result.value">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

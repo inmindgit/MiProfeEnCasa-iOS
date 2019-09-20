@@ -167,19 +167,6 @@ class ApiManager
         }
         else
         {
-            getManager.responseJSON { response in
-                switch (response.result) {
-                case .success:
-                    // completion(nil)
-                    break
-                case .failure(let error):
-                    
-                    // completion(nil)
-                    break
-                }
-            }
-            
-            /*
             getManager.responseObject { (response: DataResponse<T>) in
             {
                 switch response.result {
@@ -190,7 +177,7 @@ class ApiManager
                 }
             }()
             }
-        */
+        
         }
     }
     

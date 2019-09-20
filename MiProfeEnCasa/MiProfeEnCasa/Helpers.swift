@@ -163,7 +163,7 @@ class Helpers{
         
         var dateToReturn = Date()
         
-        if(nextClassDate.isGreaterOrEqualsThan(Date()))
+        if(nextClassDate.isSmallerThan(Date()))
         {
             dateToReturn = Calendar.current.date(byAdding: .weekOfYear, value: 1, to: nextClassDate)!
         }

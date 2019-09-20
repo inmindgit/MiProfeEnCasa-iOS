@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().isTranslucent = false
         
-        let isUserLoggedIn: Bool? = UserDefaults.standard.value(forKey: Constants.UserDefaults.kIsUserLoggedIn) as? Bool
+         let isUserLoggedIn: Bool? = UserDefaults.standard.value(forKey: Constants.UserDefaults.kIsUserLoggedIn) as? Bool
         
         if(isUserLoggedIn != nil && isUserLoggedIn!)
         {
