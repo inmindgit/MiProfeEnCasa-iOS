@@ -37,10 +37,13 @@ class RequestListViewController: UIViewController, SWRevealViewControllerDelegat
         self.navigationItem.hidesBackButton = true
         self.title = NSLocalizedString("REQUESTS", comment: "")
 
-      //  NotificationCenter.default.addObserver(self, selector: #selector(self.deviceTokenAssociation), name: Notification.Name("FCMToken"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.deviceTokenAssociation), name: Notification.Name("FCMToken"), object: nil)
     
         self.setupMenu()
-       // self.deviceTokenAssociation()
+        if Helpers.tokenIdForPushNofifications != nil
+        {
+            self.deviceTokenAssociation()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

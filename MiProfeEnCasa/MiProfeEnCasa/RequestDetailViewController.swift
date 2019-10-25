@@ -297,11 +297,17 @@ extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSour
                     {
                         if let addressNumber = self.request?.UdireccionNumero
                         {
-                            cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)! + " " + addressNumber
-                            
-                            if let addressApto = self.request?.UdireccionApto
+                            if(self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestReaded)
                             {
-                                cell.lblAddress.text = cell.lblAddress.text! + " " + addressApto
+                                cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                            }
+                            else
+                            {
+                                cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)! + " " + addressNumber
+                                if let addressApto = self.request?.UdireccionApto
+                                {
+                                    cell.lblAddress.text = cell.lblAddress.text! + " " + addressApto
+                                }
                             }
                         }
                         else
@@ -400,7 +406,7 @@ extension RequestDetailViewController : UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(self.isClassHourPickerSelection)
         {
-            let hoursAndMinutesOfClass = [self.hoursOfClases!,["0", "30"]];
+            let hoursAndMinutesOfClass = [self.hoursOfClases!,["00", "30"]];
             return hoursAndMinutesOfClass[component][row]
         }
         else
