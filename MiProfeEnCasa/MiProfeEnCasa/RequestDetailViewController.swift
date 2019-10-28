@@ -297,7 +297,7 @@ extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSour
                     {
                         if let addressNumber = self.request?.UdireccionNumero
                         {
-                            if(self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestReaded || self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestPreAccepted)
+                            if(self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestNotReaded || self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestReaded || self.request?.estadoSolicitudMaestroId == Constants.RequestStatus.kRequestPreAccepted)
                             {
                                 cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
                             }
