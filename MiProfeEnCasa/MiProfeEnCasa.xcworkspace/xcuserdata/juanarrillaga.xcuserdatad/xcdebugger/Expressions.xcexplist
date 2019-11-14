@@ -144,10 +144,13 @@
                value = "self.request">
             </PersistentString>
             <PersistentString
-               value = "self.request?.estadoSolicitudMaestroId">
+               value = "self.request?.UdireccionCalle">
             </PersistentString>
             <PersistentString
-               value = "self.request?.UdireccionCalle">
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "self.request?.estadoSolicitudMaestroId">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -274,6 +277,14 @@
             </PersistentString>
             <PersistentString
                value = "Date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SubjectsViewController.viewDidLoad():SubjectsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "subjectsText">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

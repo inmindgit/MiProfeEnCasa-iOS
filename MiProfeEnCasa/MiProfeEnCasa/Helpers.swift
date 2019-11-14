@@ -110,7 +110,7 @@ class Helpers{
     
     static func validateMinimunTimeRequest(selectedHour: Int, selectedMinutes: Int) -> Bool
     {
-        if((selectedHour == 1 && selectedMinutes == 0) || selectedHour == 0)
+        if((selectedHour == 0 && selectedMinutes == 0))
         {
             return false
         }

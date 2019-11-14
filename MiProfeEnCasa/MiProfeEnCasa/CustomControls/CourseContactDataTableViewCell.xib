@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,8 +13,8 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="152" id="KGk-i7-Jjw" customClass="CourseContactDataTableViewCell" customModule="MiProfeEnCasa" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="151.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_map" translatesAutoresizingMaskIntoConstraints="NO" id="0eG-Fd-yAf">
@@ -27,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud2-aQ-aCk">
-                        <rect key="frame" x="50" y="10" width="0.0" height="21"/>
+                        <rect key="frame" x="50" y="10" width="255" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="41" id="IRC-Ke-Ayj"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="prh-X0-QI8"/>
@@ -36,14 +34,18 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zona" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biB-tz-5e2">
-                        <rect key="frame" x="50" y="31" width="255" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zona" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biB-tz-5e2">
+                        <rect key="frame" x="50" y="31" width="255" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="Xax-rI-mgk"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="s7n-D8-Z2t"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhw-XV-0uX">
-                        <rect key="frame" x="50" y="57" width="260" height="21"/>
+                        <rect key="frame" x="50" y="62" width="260" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="41" id="Pda-8I-pOd"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="RfK-HI-nXB"/>
@@ -53,7 +55,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del estudiante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-l1-oMN">
-                        <rect key="frame" x="50" y="78" width="260" height="16"/>
+                        <rect key="frame" x="50" y="83" width="260" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="aue-vt-pTy"/>
                         </constraints>
@@ -61,8 +63,8 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy5-rv-zmG">
-                        <rect key="frame" x="50" y="104" width="260" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy5-rv-zmG">
+                        <rect key="frame" x="50" y="109" width="260" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="41" id="Q7Y-M1-FWq"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="dzQ-od-DsL"/>
@@ -72,7 +74,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9D-oy-WJ7">
-                        <rect key="frame" x="50" y="125" width="260" height="16"/>
+                        <rect key="frame" x="50" y="130" width="260" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="syL-S5-H21"/>
                         </constraints>
@@ -88,6 +90,7 @@
                     <constraint firstItem="Zhw-XV-0uX" firstAttribute="top" secondItem="biB-tz-5e2" secondAttribute="bottom" constant="10" id="2zC-S5-aeL"/>
                     <constraint firstAttribute="trailing" secondItem="P9D-oy-WJ7" secondAttribute="trailing" constant="10" id="4Vr-M4-AN7"/>
                     <constraint firstItem="P9D-oy-WJ7" firstAttribute="top" secondItem="Yy5-rv-zmG" secondAttribute="bottom" id="8FQ-UB-rwA"/>
+                    <constraint firstAttribute="trailing" secondItem="ud2-aQ-aCk" secondAttribute="trailing" constant="15" id="Bo6-zu-bCr"/>
                     <constraint firstItem="P9D-oy-WJ7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="CHE-p1-rCx"/>
                     <constraint firstItem="P9D-oy-WJ7" firstAttribute="top" secondItem="Yy5-rv-zmG" secondAttribute="bottom" id="Cgx-Ii-8Fc"/>
                     <constraint firstItem="Yy5-rv-zmG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="LrE-8D-TG1"/>
@@ -112,6 +115,7 @@
                 <outlet property="lblPhone" destination="Yy5-rv-zmG" id="0B0-qA-4cs"/>
                 <outlet property="lblStudentName" destination="Zhw-XV-0uX" id="GZu-sE-wIY"/>
             </connections>
+            <point key="canvasLocation" x="139" y="150"/>
         </tableViewCell>
     </objects>
     <resources>

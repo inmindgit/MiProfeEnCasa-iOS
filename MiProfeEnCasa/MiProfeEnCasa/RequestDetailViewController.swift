@@ -8,12 +8,12 @@
 
 import UIKit
 
-class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelegate{
+class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelegate, CourseBasicDataTableViewCellDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     let imageView = UIImageView()
     var request: RequestModel?
-    var pickerHours = [["1","2","3","4","5","6","7","8","9","10"],["0", "5"]];
+    var pickerHours = [["0","1","2","3","4","5","6","7","8","9","10"],["0", "5"]];
     var hoursOfClases: [String]?
     var hourPicker = UIPickerView()
     var isClassHourPickerSelection : Bool = false
@@ -263,6 +263,13 @@ class RequestDetailViewController: UIViewController, ScheduleTableViewCellDelega
             self.hoursOfClases?.append(String(startHourInteger! + i))
         }
     }
+    
+    func openSubjects()
+    {
+        let  subjectsViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubjectsViewController") as! SubjectsViewController
+        subjectsViewController.subjectsText = self.request?.SAobservaciones
+        self.navigationController?.pushViewController(subjectsViewController, animated: true)
+    }
 }
 
 extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSource
@@ -278,6 +285,7 @@ extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSour
             cell.lblCourse.text = self.request?.Cnombre
             cell.lblDescription.text = self.request?.Cdescripcion
             cell.lblPreparationType.text = self.request?.SAprueba
+            cell.delegate = self
             return cell
         }
         else if(indexPath.row == 1)
@@ -336,6 +344,16 @@ extension RequestDetailViewController : UITableViewDelegate, UITableViewDataSour
                     if(self.request?.UdireccionCalle != nil && self.request?.UdireccionEsquina != nil)
                     {
                         cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)!
+                    }
+                    
+                    if let addressNumber = self.request?.UdireccionNumero
+                    {
+                        cell.lblAddress.text = (self.request?.UdireccionCalle)! + " esquina " + (self.request?.UdireccionEsquina)! + " " + addressNumber
+                    
+                        if let addressApto = self.request?.UdireccionApto
+                        {
+                            cell.lblAddress.text = cell.lblAddress.text! + " " + addressApto
+                        }
                     }
                     
                     cell.lblStudentName.text = (self.request?.Unombre)! + " " + (self.request?.Uapellido)!

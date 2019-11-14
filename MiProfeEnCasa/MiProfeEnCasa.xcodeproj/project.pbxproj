@@ -21,6 +21,7 @@
 		42636C5622835C77004C0AFF /* TimePeriodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42636C5422835C77004C0AFF /* TimePeriodTableViewCell.swift */; };
 		42636C5722835C77004C0AFF /* TimePeriodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42636C5522835C77004C0AFF /* TimePeriodTableViewCell.xib */; };
 		426CD54822860E10006C68A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 426CD54722860E10006C68A2 /* GoogleService-Info.plist */; };
+		426FA55A237DE91F00A81ACC /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426FA559237DE91F00A81ACC /* SubjectsViewController.swift */; };
 		42B3E80F227CB6A2007C02F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B3E80E227CB6A2007C02F0 /* Constants.swift */; };
 		42B3E81222807B87007C02F0 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B3E81122807B87007C02F0 /* Helpers.swift */; };
 		42CB554422B835C4004CFED8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CB554222B835C3004CFED8 /* Crashlytics.framework */; };
@@ -68,6 +69,7 @@
 		42636C5522835C77004C0AFF /* TimePeriodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimePeriodTableViewCell.xib; sourceTree = "<group>"; };
 		426CD54622860536006C68A2 /* MiProfeEnCasa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiProfeEnCasa.entitlements; sourceTree = "<group>"; };
 		426CD54722860E10006C68A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		426FA559237DE91F00A81ACC /* SubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
 		42B3E80E227CB6A2007C02F0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42B3E81122807B87007C02F0 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		42CB554222B835C3004CFED8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				42E4645F2278BE3D0004CC91 /* RequestListViewController.swift */,
 				42E4646D2278D8740004CC91 /* RequestDetailViewController.swift */,
 				42E464712278E1A60004CC91 /* RecoverPasswordViewController.swift */,
+				426FA559237DE91F00A81ACC /* SubjectsViewController.swift */,
 				42E46481227B8F280004CC91 /* ProfileViewController.swift */,
 				42E46476227B40680004CC91 /* MenuViewController.swift */,
 				42FD63CB2285CE4A005BEE02 /* ReportViewController.swift */,
@@ -389,6 +392,7 @@
 				42E4647A227B6DFF0004CC91 /* MenuTableViewCell.swift in Sources */,
 				42E4645D2278BE220004CC91 /* RequestListTableViewCell.swift in Sources */,
 				4230382B228B175C008E855F /* CourseContactTableViewCell.swift in Sources */,
+				426FA55A237DE91F00A81ACC /* SubjectsViewController.swift in Sources */,
 				42E46482227B8F280004CC91 /* ProfileViewController.swift in Sources */,
 				42E46477227B40680004CC91 /* MenuViewController.swift in Sources */,
 				42636C5322832FF0004C0AFF /* Extensions.swift in Sources */,
@@ -566,7 +570,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MiProfeEnCasa/MiProfeEnCasa.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 21;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = F8RL2MHL9J;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -595,7 +599,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiProfeEnCasa/MiProfeEnCasa.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = F8RL2MHL9J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

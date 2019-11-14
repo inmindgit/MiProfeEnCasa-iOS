@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0p9-bQ-sZO">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0p9-bQ-sZO">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +13,7 @@
             <objects>
                 <navigationController storyboardIdentifier="LoginNavigationController" id="0p9-bQ-sZO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cEU-Jl-tgV">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -35,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="awD-R0-zUE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Fwh-iM-1Pb">
@@ -177,18 +175,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEN-ye-vDX" customClass="TPKeyboardAvoidingScrollView" customModule="TPKeyboardAvoidingSwift">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5E-PP-VgW">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Celular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="68H-2y-et6" customClass="GBTextField" customModule="GBFloatingTextField">
-                                                <rect key="frame" x="56" y="225" width="297" height="30"/>
+                                                <rect key="frame" x="56" y="245" width="297" height="30"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="By0-ic-R7O"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                                                 <userDefinedRuntimeAttributes>
@@ -220,12 +217,11 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Llt-uM-sfk" customClass="GBTextField" customModule="GBFloatingTextField">
-                                                <rect key="frame" x="56" y="307" width="297" height="30"/>
+                                                <rect key="frame" x="56" y="327" width="297" height="30"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="oOx-k0-423"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                                                 <userDefinedRuntimeAttributes>
@@ -257,21 +253,21 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_action_mail" translatesAutoresizingMaskIntoConstraints="NO" id="HcC-Dd-yfy">
-                                                <rect key="frame" x="16" y="307" width="30" height="30"/>
+                                                <rect key="frame" x="16" y="327" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Jrk-1K-aoN"/>
                                                     <constraint firstAttribute="width" constant="30" id="OJ1-2g-xW3"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mi_profe" translatesAutoresizingMaskIntoConstraints="NO" id="i49-Bh-Mmg">
-                                                <rect key="frame" x="137.5" y="60" width="100" height="100"/>
+                                                <rect key="frame" x="137.5" y="80" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="8Xl-Cf-fYg"/>
                                                     <constraint firstAttribute="height" constant="100" id="nbK-gR-twM"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os7-rP-txb">
-                                                <rect key="frame" x="32" y="402" width="311" height="44"/>
+                                                <rect key="frame" x="32" y="422" width="311" height="44"/>
                                                 <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="9oC-Yp-GUU"/>
@@ -286,7 +282,7 @@
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_phone" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-JU-Jrk">
-                                                <rect key="frame" x="16" y="233" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="253" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="SiC-Ii-y4U"/>
                                                     <constraint firstAttribute="width" constant="20" id="g3q-0W-iCY"/>
@@ -362,7 +358,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COV-KA-FBS" customClass="TPKeyboardAvoidingScrollView" customModule="TPKeyboardAvoidingSwift">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcO-Pz-cYx">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="616"/>
@@ -376,7 +372,6 @@
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sei-Jv-PTT" customClass="GBTextField" customModule="GBFloatingTextField">
                                                 <rect key="frame" x="32" y="220" width="311" height="17"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                                 <userDefinedRuntimeAttributes>
@@ -408,7 +403,6 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-mN-x3Z" customClass="GBTextField" customModule="GBFloatingTextField">
                                                 <rect key="frame" x="32" y="287" width="311" height="17"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
@@ -530,7 +524,6 @@
                                     <constraint firstAttribute="width" id="CSs-mw-9Ka"/>
                                     <constraint firstAttribute="height" constant="30" id="rhm-Dm-WEK"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -563,12 +556,45 @@
             </objects>
             <point key="canvasLocation" x="-958" y="504"/>
         </scene>
+        <!--Subjects View Controller-->
+        <scene sceneID="uD2-ZA-F0l">
+            <objects>
+                <viewController storyboardIdentifier="SubjectsViewController" id="E16-dd-2Du" customClass="SubjectsViewController" customModule="MiProfeEnCasa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QHa-th-KI6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z69-oE-cMa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Z69-oE-cMa" firstAttribute="bottom" secondItem="uTz-5s-8D2" secondAttribute="bottom" id="1ss-u5-mor"/>
+                            <constraint firstItem="Z69-oE-cMa" firstAttribute="trailing" secondItem="uTz-5s-8D2" secondAttribute="trailing" id="HM6-l0-jvr"/>
+                            <constraint firstItem="Z69-oE-cMa" firstAttribute="top" secondItem="uTz-5s-8D2" secondAttribute="top" id="ZUU-Wk-rOM"/>
+                            <constraint firstItem="Z69-oE-cMa" firstAttribute="leading" secondItem="uTz-5s-8D2" secondAttribute="leading" id="wye-nr-6P6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uTz-5s-8D2"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtSubjects" destination="Z69-oE-cMa" id="JPr-90-r4h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vz7-Bw-ig6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.40000000000001" y="499.70014992503752"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="WsP-1y-OT0">
             <objects>
                 <navigationController id="OfI-2u-8s6" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TW5-Ca-sIi">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.6588235294117647" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
@@ -608,7 +634,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSa-6j-m7e" customClass="TPKeyboardAvoidingScrollView" customModule="TPKeyboardAvoidingSwift">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5W9-Zd-aXv">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
@@ -619,7 +645,6 @@
                                                     <constraint firstAttribute="height" constant="17" id="kTf-9f-Ucw"/>
                                                     <constraint firstAttribute="width" constant="311" id="wFT-4v-38G"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                                                 <userDefinedRuntimeAttributes>
@@ -725,7 +750,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raa-nV-c7c" customClass="TPKeyboardAvoidingScrollView" customModule="TPKeyboardAvoidingSwift">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HW6-Lk-IT0">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
@@ -736,7 +761,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="bbL-xm-RIW"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <userDefinedRuntimeAttributes>
@@ -772,7 +796,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="3IC-Ht-9d9"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -824,7 +847,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="bhd-CR-egA"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -860,7 +882,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="kDR-LW-XTe"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -896,7 +917,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="3mM-Je-U1O"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1010,8 +1030,8 @@
         <image name="fondo" width="970" height="696"/>
         <image name="ic_action_mail" width="64" height="64"/>
         <image name="ic_exit_to_app" width="36" height="36"/>
-        <image name="ico_menu" width="9.0552148818969727" height="7.0674848556518555"/>
-        <image name="ico_phone" width="32" height="32"/>
+        <image name="ico_menu" width="20.5" height="16"/>
+        <image name="ico_phone" width="16" height="16"/>
         <image name="logo_mi_profe" width="112" height="172"/>
     </resources>
 </document>

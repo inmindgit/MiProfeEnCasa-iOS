@@ -21,7 +21,7 @@
 "TEST_DATE" = "Prueba: ";
 
 "RANGE_SELECTION_ERROR" = "Debe elegir una hora de comienzo dentro del rango elegido.";
-"TIME_SELECTION_ERROR" = "Debe elegir una cantidad de tiempo superior o igual a 1:30 horas.";
+"TIME_SELECTION_ERROR" = "Debe elegir una cantidad de tiempo superior o igual a media hora";
 "REQUESTS" = "Solicitudes";
 "PROFILE" = "Perfil";
 
@@ -70,3 +70,4 @@
 "LOAD_TIME_UNAVAILABLE" = "Aún no está disponible la carga de horas. Espere a realizar la clase.";
 "ZONE" = "Zona";
 "CONTACT" = "Contacto";
+"SUBJECTS" = "Temas a preparar";
