@@ -27,6 +27,7 @@ extension UITableView {
     func setEmptyView(title: String) {
         let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
         let titleLabel = UILabel()
+        
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = UIColor.darkGray
         titleLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 14)
