@@ -97,6 +97,27 @@ class RequestListViewController: UIViewController, SWRevealViewControllerDelegat
                     ApiManager.sharedInstance.showHud = true
                     self.refreshControl.endRefreshing()
                     self.tableView.reloadData()
+                    if self.requestList != nil && self.requestList?.result?.count ?? 0 > 0
+                    {
+                        self.tableView.backgroundView = nil
+                        
+                    }
+                    else
+                    {
+                        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height));
+                        let messageLabel = UILabel(frame: rect);
+                        messageLabel.text = "No existen solicitudes";
+                        messageLabel.textColor = UIColor.black;
+                        messageLabel.numberOfLines = 0;
+                        messageLabel.textAlignment = .center;
+                        messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+                        messageLabel.sizeToFit()
+
+                        self.tableView.backgroundView = messageLabel;
+                        
+                        self.tableView.separatorStyle = .none;
+                    }
+                   
                 }
             }
             else
