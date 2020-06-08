@@ -571,7 +571,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiProfeEnCasa/MiProfeEnCasa.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = F8RL2MHL9J;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -600,7 +600,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiProfeEnCasa/MiProfeEnCasa.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = F8RL2MHL9J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
